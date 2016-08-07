@@ -1,0 +1,43 @@
+#!/bin/bash
+# diamond
+# http://github.com/iandennismiller/diamond
+
+SKEL_TYPE=$1
+DESTINATION=$2
+
+function usage() {
+cat <<-EOF
+
+    Usage: diamond [type] [destination]
+
+    Options:
+
+        -h, --help           output help information
+
+    Types:
+
+        article              a LaTeX article
+        analysis             an R project
+EOF
+}
+
+function scaffold() {
+    echo "create project type '${SKEL_TYPE}' in '${DESTINATION}'"
+    mrbob -w "${VIRTUAL_ENV}/share/skels/${SKEL_TYPE}" -O "${DESTINATION}"
+    exit
+}
+
+# handle the case where there are no arguments
+
+if test $# -lt 2; then
+    usage
+    exit
+fi
+
+while test $# -ne 0; do
+    arg=$1; shift
+    case $arg in
+        -h|--help) usage; exit ;;
+        article|analysis) scaffold $SKEL_TYPE $DESTINATION; exit ;;
+    esac
+done
