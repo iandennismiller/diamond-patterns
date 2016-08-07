@@ -8,16 +8,20 @@ DESTINATION=$2
 function usage() {
 cat <<-EOF
 
+    Diamond - http://github.com/iandennismiller/diamond
+
     Usage: diamond [type] [destination]
 
     Options:
 
-        -h, --help           output help information
+        -h, --help          output help information
 
     Types:
 
-        article              a LaTeX article
-        analysis             an R project
+        article             a LaTeX article
+        analysis            an R project
+        python              Python module for pypi
+
 EOF
 }
 
@@ -27,17 +31,19 @@ function scaffold() {
     exit
 }
 
-# handle the case where there are no arguments
+# handle the case where there are not enough arguments
 
 if test $# -lt 2; then
     usage
     exit
 fi
 
+# handle arguments
+
 while test $# -ne 0; do
     arg=$1; shift
     case $arg in
         -h|--help) usage; exit ;;
-        article|analysis) scaffold $SKEL_TYPE $DESTINATION; exit ;;
+        article|analysis|python) scaffold $SKEL_TYPE $DESTINATION; exit ;;
     esac
 done
