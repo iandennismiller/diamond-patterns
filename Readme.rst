@@ -1,13 +1,21 @@
-Diamond
-=============
+Diamond-Patterns
+================
 
-**Diamond**  scaffolds projects according to patterns.
+**Diamond-Patterns**  scaffolds projects according to patterns.
+
+Installation
+^^^^^^^^^^^^
+
+::
+
+    mkvirtualenv diamond
+    pip install Diamond-Patterns
 
 Usage
 ^^^^^
 
 ::
 
-    pip install Diamond
+    workon diamond
     mkdir ~/Documents/my-article
     diamond article ~/Documents/my-article

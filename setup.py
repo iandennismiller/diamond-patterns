@@ -24,8 +24,8 @@ def grep(attrname):
 
 setup(
     version=grep('__version__'),
-    name='Diamond',
-    description="**Diamond** scaffolds projects according to patterns.",
+    name='Diamond-Patterns',
+    description="**Diamond-Patterns** scaffolds projects according to patterns.",
     scripts=[
         "bin/diamond",
     ],
