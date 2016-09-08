@@ -7,3 +7,4 @@ Table of Contents
     :maxdepth: 1
 
     license
+    changelog
