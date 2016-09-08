@@ -1,0 +1,32 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: {{{ project.name }}}
+# email: {{{ author.email }}}
+description: > # this means to ignore newlines until "baseurl:"
+  Describe the site.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "{{{ production.url }}}" # the base hostname & protocol for your site
+# twitter_username: {{{ author.twitter }}}
+# github_username:  {{{ author.github }}}
+include: ["_pages", "_root", "_js"]
+exclude: ["Readme.md", "Todo.md", "Makefile", "vendor", "Gemfile", "Gemfile.lock"]
+permalink: none
+
+# Build settings
+markdown: kramdown
+
+google_analytics_id: {{{ google_analytics_id }}}
+
+disqus_domain: {{{ disqus.domain }}}
+
+sass:
+  style: compressed
+
+gems:
+  - jekyll-sitemap
