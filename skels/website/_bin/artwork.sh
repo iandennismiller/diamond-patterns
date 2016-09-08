@@ -1,6 +1,5 @@
 #!/bin/bash
-# {{{ project.name }}}
-# {{{ project.license }}}
+# (cc) 2016 diamond-patterns
 
 # favicon
 cd _artwork && convert logo.png -resize 16x16 favicon.ico && cd ..

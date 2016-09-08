@@ -1,6 +1,5 @@
 #!/bin/bash
-# {{{ project.name }}}
-# {{{ project.license }}}
+# (cc) 2016 diamond-patterns
 
 curl -L -o _js/_lib/jekyll_toc.js https://raw.githubusercontent.com/ghiculescu/jekyll-table-of-contents/master/toc.js
 curl -L -o _js/_lib/jquery.md5.js https://github.com/placemarker/jQuery-MD5/raw/master/jquery.md5.js

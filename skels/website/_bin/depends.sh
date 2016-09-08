@@ -1,6 +1,5 @@
 #!/bin/bash
-# {{{ project.name }}}
-# {{{ project.license }}}
+# (cc) 2016 diamond-patterns
 
 # ensure rvm is installed
 # ensure bundler is installed

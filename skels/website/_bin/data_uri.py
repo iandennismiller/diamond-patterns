@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# {{{ project.name }}}
-# {{{ project.license }}}
+# (cc) 2016 diamond-patterns
 
 import sys
 

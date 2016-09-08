@@ -7,26 +7,39 @@
 
 # Site settings
 title: {{{ project.name }}}
-# email: {{{ author.email }}}
-description: > # this means to ignore newlines until "baseurl:"
-  Describe the site.
+description: > # this means to ignore newlines until next variable
+  {{{ project.description }}}
+license: "{{{ project.license }}}"
+
+# Links
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "{{{ production.url }}}" # the base hostname & protocol for your site
-# twitter_username: {{{ author.twitter }}}
-# github_username:  {{{ author.github }}}
+permalink: none
+
+# include/exclude files
 include: ["_pages", "_root", "_js"]
 exclude: ["Readme.md", "Todo.md", "Makefile", "vendor", "Gemfile", "Gemfile.lock"]
-permalink: none
 
 # Build settings
 markdown: kramdown
-
-google_analytics_id: {{{ google_analytics_id }}}
-
-disqus_domain: {{{ disqus.domain }}}
 
 sass:
   style: compressed
 
 gems:
   - jekyll-sitemap
+
+# Email
+# email: {{{ author.email }}}
+
+# Twitter
+# twitter_username: {{{ author.twitter }}}
+
+# GitHub
+# github_username:  {{{ author.github }}}
+
+# Google Analytics
+# google_analytics_id: {{{ google_analytics_id }}}
+
+# Disqus comments
+# disqus: {{{ disqus.domain }}}

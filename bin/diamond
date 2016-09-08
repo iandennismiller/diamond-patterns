@@ -10,17 +10,18 @@ cat <<-EOF
 
     Diamond - http://github.com/iandennismiller/diamond
 
-    Usage: diamond [type] [destination]
+    Usage: diamond [pattern] [destination]
 
     Options:
 
         -h, --help          output help information
 
-    Types:
+    Patterns:
 
         article             a LaTeX article
         analysis            an R project
         python              Python module for pypi
+        website             a Jekyll website
 
 EOF
 }
@@ -44,6 +45,6 @@ while test $# -ne 0; do
     arg=$1; shift
     case $arg in
         -h|--help) usage; exit ;;
-        article|analysis|python) scaffold $SKEL_TYPE $DESTINATION; exit ;;
+        article|analysis|python|website) scaffold $SKEL_TYPE $DESTINATION; exit ;;
     esac
 done

@@ -3,9 +3,7 @@
 # derived from:
 # - http://benjamincongdon.me/blog/2016/03/21/Jekyll-New-Post-Script/
 # - http://github.com/pubgem/www-pubgem-org
-#
-# {{{ project.name }}}
-# {{{ project.license }}}
+# - http://github.com/iandennismiller/diamond-patterns
 
 from datetime import datetime
 import sys
