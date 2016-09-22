@@ -36,15 +36,11 @@ function diamond-upgrade() {
     fi
 }
 
-if test $# -lt 1; then
-    usage
-    exit
-fi
-
 while test $# -ne 0; do
     arg=$1; shift
     case $arg in
         -h|--help) usage; exit ;;
-        *) project-new; exit ;;
     esac
 done
+
+diamond-upgrade
