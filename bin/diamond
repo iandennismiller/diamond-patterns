@@ -4,37 +4,74 @@
 
 SKEL_TYPE=$1
 DESTINATION=$2
+DIAMOND_PATTERNS_PATH=~/.diamond-patterns
+DIAMOND_SKELS_PATH=~/.diamond-patterns/skels
+
+if [ -f ~/.diamond-patterns.conf  ]; then
+    source ~/.diamond-patterns.conf
+fi
 
 function usage() {
 cat <<-EOF
+Diamond - http://github.com/iandennismiller/diamond
 
-    Diamond - http://github.com/iandennismiller/diamond
+Usage: diamond [pattern] [destination]
 
-    Usage: diamond [pattern] [destination]
+Options:
 
-    Options:
+    -h, --help          output help information
 
-        -h, --help          output help information
+Patterns:
 
-    Patterns:
-
-        article             a LaTeX article
-        analysis            an R project
-        python              Python module for pypi
-        website             a Jekyll website
+    article             a LaTeX article
+    analysis            an R project
+    python              Python module for pypi
+    website             a Jekyll website
 
 EOF
 }
 
+function locate_skels() {
+    # try to locate skels within a virtual environment
+    if [ -d "${VIRTUAL_ENV}/share/skels" ]; then
+        echo "inside virtualenv"
+        DIAMOND_SKELS_PATH=${VIRTUAL_ENV}/share/skels
+    # try to locate skels within the user directory
+    elif [ -d "${DIAMOND_PATTERNS_PATH}/skels" ]; then
+        echo "inside global"
+        DIAMOND_SKELS_PATH=${DIAMOND_PATTERNS_PATH}/skels
+    # finally, try to clone skels to the user directory
+    else
+        clone_skels
+        DIAMOND_SKELS_PATH=${DIAMOND_PATTERNS_PATH}/skels
+    fi
+
+    # in the end, override any of these settings
+    # if [ -f ~/.diamond-patterns.conf  ]; do
+    #     source ~/.diamond-patterns.conf
+    # done
+}
+
+function clone_skels() {
+    # by default, install to DIAMOND_PATTERNS_PATH=~/.diamond-patterns
+    if [ ! -d "${DIAMOND_PATTERNS_PATH}/skels" ]; then
+        echo "cloning from GitHub into ${DIAMOND_PATTERNS_PATH}"
+        git clone https://github.com/iandennismiller/diamond-patterns.git "${DIAMOND_PATTERNS_PATH}"
+    fi
+}
+
 function scaffold() {
+    locate_skels
     echo "create project type '${SKEL_TYPE}' in '${DESTINATION}'"
-    mrbob -w "${VIRTUAL_ENV}/share/skels/${SKEL_TYPE}" -O "${DESTINATION}"
+    mrbob -w "${DIAMOND_PATTERNS_PATH}/${SKEL_TYPE}" -O "${DESTINATION}"
     exit
 }
 
 # handle the case where there are not enough arguments
 
 if test $# -lt 2; then
+    locate_skels
+    echo "DIAMOND_SKELS_PATH=${DIAMOND_SKELS_PATH}"
     usage
     exit
 fi
@@ -45,6 +82,6 @@ while test $# -ne 0; do
     arg=$1; shift
     case $arg in
         -h|--help) usage; exit ;;
-        article|analysis|python|website) scaffold $SKEL_TYPE $DESTINATION; exit ;;
+        *) scaffold $SKEL_TYPE $DESTINATION; exit ;;
     esac
 done

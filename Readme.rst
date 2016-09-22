@@ -6,10 +6,19 @@ Diamond-Patterns
 Installation
 ^^^^^^^^^^^^
 
+Install inside a virtual environment:
+
 ::
 
     mkvirtualenv diamond
     pip install Diamond-Patterns
+
+Install system-wide with Homebrew:
+
+::
+
+    brew install https://raw.github.com/iandennismiller/diamond-patterns/master/homebrew/diamond-patterns.rb
+
 
 Usage
 ^^^^^

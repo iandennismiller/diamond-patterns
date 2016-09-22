@@ -1,0 +1,67 @@
+#!/bin/bash
+
+if [ -f ~/.diamond-patterns.conf  ]; then
+    source ~/.diamond-patterns.conf
+fi
+
+function usage() {
+cat <<-EOF
+Diamond - http://github.com/iandennismiller/diamond
+
+Usage: diamond-conf-init
+
+Options:
+
+    -h, --help          output help information
+
+Description:
+
+    diamond-conf-init creates a basic configuration file
+    in ~/.diamond-patterns.conf and will overwrite any file
+    that is already present.
+
+EOF
+}
+
+function conf-init() {
+cat > ~/.diamond-patterns.conf <<-EOF
+# diamond-patterns
+
+DIAMOND_PATTERNS_PATH=~/.diamond-patterns
+
+# command to open a project
+
+PROJECT_OPEN_CMD=~.diamond-patterns/bin/project-open.sh
+
+# or, use your own script to open a project:
+# PROJECT_OPEN_CMD=~/bin/project-open.sh
+
+# location of work directory
+
+WORK_PATH=~/Work
+
+# command to enter a virtual environment
+
+WORK_CMD="workon ${PROJECT_NAME}"
+
+# command to open an editor focused on the current path
+
+EDIT_CMD="subl ."
+
+# python interpreters
+
+PYTHON3_BIN=/usr/local/bin/python3
+PYTHON_BIN=/usr/local/bin/python
+EOF
+echo "created ~/.diamond-patterns.conf"
+}
+
+while test $# -ne 0; do
+    arg=$1; shift
+    case $arg in
+        -h|--help) usage; exit ;;
+    esac
+done
+
+# just do the thing
+conf-init

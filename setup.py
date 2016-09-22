@@ -28,6 +28,14 @@ setup(
     description="**Diamond-Patterns** scaffolds projects according to patterns.",
     scripts=[
         "bin/diamond",
+        "bin/diamond-conf-init",
+        "bin/diamond-upgrade",
+        "bin/project-git-init.sh",
+        "bin/project-list",
+        "bin/project-new",
+        "bin/project-new3",
+        "bin/project-open.sh",
+        "bin/project-workon",
     ],
     long_description=read('Readme.rst'),
     classifiers=[
@@ -56,5 +64,5 @@ venv_path = os.environ.get("VIRTUAL_ENV")
 if venv_path:
     copy_tree("skels", os.path.join(venv_path, "share/skels"))
 else:
-    print("This was not installed in a virtual environment")
-    print("So, I won't install the skel files.")
+    print("This was not installed in a virtual environment.")
+    print("I won't install the skel files until later.")
