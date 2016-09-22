@@ -63,7 +63,7 @@ function clone_skels() {
 function scaffold() {
     locate_skels
     echo "create project type '${SKEL_TYPE}' in '${DESTINATION}'"
-    mrbob -w "${DIAMOND_PATTERNS_PATH}/${SKEL_TYPE}" -O "${DESTINATION}"
+    mrbob -w "${DIAMOND_SKELS_PATH}/${SKEL_TYPE}" -O "${DESTINATION}"
     exit
 }
 
