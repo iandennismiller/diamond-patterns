@@ -7,7 +7,6 @@ class DiamondPatterns < Formula
   bottle :unneeded
 
   def install
-    bin.install "bin/brew-pip"
     bin.install "bin/diamond"
     bin.install "bin/diamond-conf-init"
     bin.install "bin/diamond-upgrade"
