@@ -1,4 +1,6 @@
 #!/bin/bash
+# diamond-patterns 2016 Ian Dennis Miller
+# http://github.com/iandennismiller/diamond-patterns
 
 _project_completion()
 {

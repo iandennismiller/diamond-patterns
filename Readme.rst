@@ -6,14 +6,14 @@ Diamond-Patterns
 Installation
 ^^^^^^^^^^^^
 
-Install inside a virtual environment:
+Option 1: Install inside a virtual environment.
 
 ::
 
     mkvirtualenv diamond
     pip install Diamond-Patterns
 
-Install system-wide with Homebrew:
+Option 2: Install system-wide with Homebrew.
 
 ::
 
@@ -25,6 +25,5 @@ Usage
 
 ::
 
-    workon diamond
     mkdir ~/Documents/my-article
     diamond article ~/Documents/my-article

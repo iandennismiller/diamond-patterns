@@ -1,4 +1,6 @@
 #!/bin/bash
+# diamond-patterns 2016 Ian Dennis Miller
+# http://github.com/iandennismiller/diamond-patterns
 
 if [ -f ~/.diamond-patterns.conf  ]; then
     source ~/.diamond-patterns.conf

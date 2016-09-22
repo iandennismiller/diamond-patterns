@@ -19,7 +19,10 @@ docs:
 open:
 	open var/sphinx/build/index.html
 
+depends:
+	pip install -r requirements-dev.text
+
 release:
 	python setup.py sdist upload -r https://pypi.python.org/pypi
 
-.PHONY: all clean docs open release install
+.PHONY: all clean docs open release install depends

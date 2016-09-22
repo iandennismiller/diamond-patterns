@@ -1,6 +1,6 @@
 #!/bin/bash
-# diamond
-# http://github.com/iandennismiller/diamond
+# diamond-patterns 2016 Ian Dennis Miller
+# http://github.com/iandennismiller/diamond-patterns
 
 SKEL_TYPE=$1
 DESTINATION=$2
