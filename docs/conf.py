@@ -27,7 +27,7 @@ def read(fname):
     return open(fpath(fname)).read()
 
 
-file_text = read(fpath('../diamond/__meta__.py'))
+file_text = read(fpath('../diamond_patterns/__meta__.py'))
 
 
 def grep(attrname):
