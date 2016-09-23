@@ -13,7 +13,7 @@ fi
 
 function usage() {
 cat <<-EOF
-Diamond - http://github.com/iandennismiller/diamond
+Diamond-Patterns - http://github.com/iandennismiller/diamond-patterns
 
 Usage: diamond [pattern] [destination]
 
@@ -31,38 +31,18 @@ Patterns:
 EOF
 }
 
-function locate_skels() {
-    # try to locate skels within a virtual environment
-    if [ -d "${VIRTUAL_ENV}/share/skels" ]; then
-        echo "inside virtualenv"
-        DIAMOND_SKELS_PATH=${VIRTUAL_ENV}/share/skels
-    # try to locate skels within the user directory
-    elif [ -d "${DIAMOND_PATTERNS_PATH}/skels" ]; then
-        echo "inside global"
-        DIAMOND_SKELS_PATH=${DIAMOND_PATTERNS_PATH}/skels
-    # finally, try to clone skels to the user directory
-    else
-        clone_skels
-        DIAMOND_SKELS_PATH=${DIAMOND_PATTERNS_PATH}/skels
-    fi
-
-    # in the end, override any of these settings
-    # if [ -f ~/.diamond-patterns.conf  ]; do
-    #     source ~/.diamond-patterns.conf
-    # done
-}
-
-function clone_skels() {
-    # by default, install to DIAMOND_PATTERNS_PATH=~/.diamond-patterns
-    if [ ! -d "${DIAMOND_PATTERNS_PATH}/skels" ]; then
-        echo "cloning from GitHub into ${DIAMOND_PATTERNS_PATH}"
-        git clone https://github.com/iandennismiller/diamond-patterns.git "${DIAMOND_PATTERNS_PATH}"
-    fi
-}
-
 function scaffold() {
-    locate_skels
     echo "create project type '${SKEL_TYPE}' in '${DESTINATION}'"
+
+    DIAMOND_SKELS_PATH=$(python -c "\
+import pkg_resources
+import diamond_patterns
+import os
+filename = pkg_resources.resource_filename('diamond_patterns', 'skels')
+pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
+print(os.path.join(pathname, filename))
+    ")
+
     mrbob -w "${DIAMOND_SKELS_PATH}/${SKEL_TYPE}" -O "${DESTINATION}"
     exit
 }
@@ -70,8 +50,6 @@ function scaffold() {
 # handle the case where there are not enough arguments
 
 if test $# -lt 2; then
-    locate_skels
-    echo "DIAMOND_SKELS_PATH=${DIAMOND_SKELS_PATH}"
     usage
     exit
 fi

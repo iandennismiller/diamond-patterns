@@ -15,7 +15,7 @@ fi
 
 function usage() {
 cat <<-EOF
-Diamond - http://github.com/iandennismiller/diamond
+Diamond-Patterns - http://github.com/iandennismiller/diamond-patterns
 
 Usage: project-workon [project-name]
 
