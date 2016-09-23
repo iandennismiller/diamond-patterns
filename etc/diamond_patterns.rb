@@ -5,12 +5,17 @@
 class DiamondPatterns < Formula
   desc "Diamond Patterns for creating projects"
   homepage "https://github.com/iandennismiller/diamond-patterns"
-  url "https://github.com/iandennismiller/diamond-patterns/archive/0.2.3.tar.gz"
+  url "https://github.com/iandennismiller/diamond-patterns/archive/0.2.4.tar.gz"
   # sha256 "c8ff734544352f250186c388206aba4feacb944e194ae136b06c71e910d26f94"
 
   resource "Jinja2" do
     url "https://files.pythonhosted.org/packages/f2/2f/0b98b06a345a761bec91a079ccae392d282690c2d8272e708f4d10829e22/Jinja2-2.8.tar.gz"
     sha256 "bc1ff2ff88dbfacefde4ddde471d1417d3b304e8df103a7a9437d47269201bf4"
+  end
+
+  resource "click" do
+    url "https://files.pythonhosted.org/packages/7a/00/c14926d8232b36b08218067bcd5853caefb4737cda3f0a47437151344792/click-6.6.tar.gz"
+    sha256 "cc6a19da8ebff6e7074f731447ef7e112bd23adf3de5c597cf9989f2fd8defe9"
   end
 
   resource "MarkupSafe" do
