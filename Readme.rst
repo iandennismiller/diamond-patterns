@@ -17,9 +17,9 @@ Option 2: Install system-wide with Homebrew.
 
 ::
 
-    export REPO=https://raw.github.com/iandennismiller/diamond-patterns
-    export FILE=master/etc/diamond-patterns.rb
-    brew install ${REPO}/${FILE}
+    export REPO=https://raw.github.com/iandennismiller/diamond-patterns/master
+    export FILE=/etc/diamond-patterns.rb
+    brew install ${REPO}${FILE}
 
 
 Usage
