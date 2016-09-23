@@ -10,14 +10,16 @@ Option 1: Install inside a virtual environment.
 
 ::
 
-    mkvirtualenv diamond
-    pip install Diamond-Patterns
+    mkvirtualenv my-project
+    pip install diamond-patterns
 
 Option 2: Install system-wide with Homebrew.
 
 ::
 
-    brew install https://raw.github.com/iandennismiller/diamond-patterns/master/etc/diamond-patterns.rb
+    export REPO=https://raw.github.com/iandennismiller/diamond-patterns
+    export FILE=master/etc/diamond-patterns.rb
+    brew install ${REPO}/${FILE}
 
 
 Usage
