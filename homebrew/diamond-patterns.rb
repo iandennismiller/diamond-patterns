@@ -1,8 +1,8 @@
 class DiamondPatterns < Formula
   desc "Diamond Patterns for creating projects"
   homepage "https://github.com/iandennismiller/diamond-patterns"
-  url "https://github.com/iandennismiller/diamond-patterns/archive/0.2.0.tar.gz"
-  sha256 "5830388ac6b2b6b74fa3818ecc68e3a765418f4e22126cd17abdb709b0041ba9"
+  url "https://github.com/iandennismiller/diamond-patterns/archive/0.2.1.tar.gz"
+  sha256 "c8ff734544352f250186c388206aba4feacb944e194ae136b06c71e910d26f94"
 
   bottle :unneeded
 

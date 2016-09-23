@@ -33,7 +33,7 @@ DIAMOND_PATTERNS_PATH=~/.diamond-patterns
 
 # command to open a project
 
-PROJECT_OPEN_CMD=~.diamond-patterns/bin/project-open.sh
+PROJECT_OPEN_CMD=project-open.sh
 
 # or, use your own script to open a project:
 # PROJECT_OPEN_CMD=~/bin/project-open.sh

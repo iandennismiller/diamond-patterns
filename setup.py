@@ -1,24 +1,17 @@
 import os
 import re
+import codecs
 from setuptools import setup
-from distutils.dir_util import copy_tree
+from setuptools import find_packages
 
 
-# from https://github.com/flask-admin/flask-admin/blob/master/setup.py
-def fpath(name):
-    return os.path.join(os.path.dirname(__file__), name)
-
-
-def read(fname):
-    return open(fpath(fname)).read()
-
-
-file_text = read(fpath('diamond/__meta__.py'))
+def read(*rnames):
+    return codecs.open(os.path.join(os.path.dirname(__file__), *rnames), 'r', 'utf-8').read()
 
 
 def grep(attrname):
     pattern = r"{0}\W*=\W*'([^']+)'".format(attrname)
-    strval, = re.findall(pattern, file_text)
+    strval, = re.findall(pattern, read('diamond_patterns/__meta__.py'))
     return strval
 
 
@@ -49,7 +42,7 @@ setup(
         "Programming Language :: Python :: 2.7",
         "Topic :: Office/Business",
     ],
-    packages=["diamond"],
+    packages=find_packages(),
     include_package_data=True,
     keywords='',
     author=grep('__author__'),
@@ -59,10 +52,3 @@ setup(
     license='MIT',
     zip_safe=False,
 )
-
-venv_path = os.environ.get("VIRTUAL_ENV")
-if venv_path:
-    copy_tree("skels", os.path.join(venv_path, "share/skels"))
-else:
-    print("This was not installed in a virtual environment.")
-    print("I won't install the skel files until later.")

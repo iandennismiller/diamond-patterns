@@ -1,0 +1,23 @@
+{{{ application.name }}}
+=============
+
+{{{ description.short }}}
+
+Overview
+--------
+
+Installation
+^^^^^^^^^^^^
+
+The following will install {{{ application.name }}}.
+
+::
+
+    mkvirtualenv -a . {{{ application.name }}}
+    pip install {{{ application.name }}}
+
+
+Documentation
+^^^^^^^^^^^^^
+
+{{{ project.url }}}
