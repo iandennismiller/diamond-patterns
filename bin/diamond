@@ -1,65 +1,38 @@
-#!/bin/bash
-# diamond-patterns 2016 Ian Dennis Miller
-# http://github.com/iandennismiller/diamond-patterns
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Pub2 (cc) 2016 Ian Dennis Miller
 
-SKEL_TYPE=$1
-DESTINATION=$2
-DIAMOND_PATTERNS_PATH=~/.diamond-patterns
-DIAMOND_SKELS_PATH=~/.diamond-patterns/skels
-
-if [ -f ~/.diamond-patterns.conf  ]; then
-    source ~/.diamond-patterns.conf
-fi
-
-function usage() {
-cat <<-EOF
-Diamond-Patterns - http://github.com/iandennismiller/diamond-patterns
-
-Usage: diamond [pattern] [destination]
-
-Options:
-
-    -h, --help          output help information
-
-Patterns:
-
-    article             a LaTeX article
-    analysis            an R project
-    python              Python module for pypi
-    website             a Jekyll website
-
-EOF
-}
-
-function scaffold() {
-    echo "create project type '${SKEL_TYPE}' in '${DESTINATION}'"
-
-    DIAMOND_SKELS_PATH=$(python -c "\
+import click
 import pkg_resources
-import diamond_patterns
 import os
-filename = pkg_resources.resource_filename('diamond_patterns', 'skels')
-pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
-print(os.path.join(pathname, filename))
-    ")
+import diamond_patterns
 
-    mrbob -w "${DIAMOND_SKELS_PATH}/${SKEL_TYPE}" -O "${DESTINATION}"
-    exit
-}
 
-# handle the case where there are not enough arguments
+@click.group()
+@click.option('--skel', help='name of skel to apply.')
+@click.pass_context
+def cli(ctx, skel):
+    ctx.obj['skel'] = skel
 
-if test $# -lt 2; then
-    usage
-    exit
-fi
 
-# handle arguments
+@cli.command('scaffold', short_help='scaffold a folder with a skel.')
+@click.pass_context
+def scaffold(ctx):
+    if ctx.obj['skel'] in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
+        filename = pkg_resources.resource_filename('diamond_patterns', 'skels')
+        pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
+        print(os.path.join(pathname, filename))
+        os.system("mrbob -w {0}/{1} -O .".format(os.path.join(pathname, filename), ctx.obj['skel']))
+    else:
+        print("unrecognized skel: {0}".format(ctx.obj['skel']))
 
-while test $# -ne 0; do
-    arg=$1; shift
-    case $arg in
-        -h|--help) usage; exit ;;
-        *) scaffold $SKEL_TYPE $DESTINATION; exit ;;
-    esac
-done
+
+@cli.command('list', short_help='list available skels.')
+def list_skels():
+    print("Available skels:\n")
+    for skel in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
+        print("- {0}".format(skel))
+    print("")
+
+if __name__ == '__main__':
+    cli(obj={})

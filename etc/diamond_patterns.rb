@@ -5,7 +5,7 @@
 class DiamondPatterns < Formula
   desc "Diamond Patterns for creating projects"
   homepage "https://github.com/iandennismiller/diamond-patterns"
-  url "https://github.com/iandennismiller/diamond-patterns/archive/0.2.2.tar.gz"
+  url "https://github.com/iandennismiller/diamond-patterns/archive/0.2.3.tar.gz"
   # sha256 "c8ff734544352f250186c388206aba4feacb944e194ae136b06c71e910d26f94"
 
   resource "Jinja2" do

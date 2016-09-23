@@ -22,7 +22,6 @@ setup(
     scripts=[
         "bin/diamond",
         "bin/diamond-conf-init",
-        "bin/diamond-upgrade",
         "bin/project-git-init.sh",
         "bin/project-list",
         "bin/project-new",
