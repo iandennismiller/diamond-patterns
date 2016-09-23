@@ -17,7 +17,7 @@ Option 2: Install system-wide with Homebrew.
 
 ::
 
-    brew install https://raw.github.com/iandennismiller/diamond-patterns/master/homebrew/diamond-patterns.rb
+    brew install https://raw.github.com/iandennismiller/diamond-patterns/master/etc/diamond-patterns.rb
 
 
 Usage
@@ -26,4 +26,5 @@ Usage
 ::
 
     mkdir ~/Documents/my-article
-    diamond article ~/Documents/my-article
+    cd ~/Documents/my-article
+    diamond --skel article scaffold
