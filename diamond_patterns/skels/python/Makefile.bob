@@ -6,19 +6,17 @@ MOD_NAME={{{ application.module }}}
 install:
 	python setup.py install
 
-requirements:
-	pip install -r requirements.txt
-
-requirements-dev:
-	pip install -r requirements-dev.txt
-
 clean:
 	rm -rf build dist *.egg-info
 	find . -name '*.pyc' -delete
 	find . -name __pycache__ -delete
 
+docs:
+	rm -rf build/sphinx
+	sphinx-build -b html docs build/sphinx
+
 watch:
-	watchmedo shell-command -R -p "*.py" -c 'date; $(TEST_CMD) -c etc/tests.cfg; date' .
+	watchmedo shell-command -R -p "*.py" -c 'date; nosetests -w $(MOD_NAME) -c etc/tests.cfg; date' .
 
 test:
 	nosetests -w $(MOD_NAME) -c etc/tests.cfg
@@ -26,12 +24,8 @@ test:
 tox:
 	tox
 
-docs:
-	rm -rf build/sphinx
-	sphinx-build -b html docs build/sphinx
-
 release:
 	# first: python setup.py register -r https://pypi.python.org/pypi
 	python setup.py sdist upload -r https://pypi.python.org/pypi
 
-.PHONY: clean install test watch docs release requirements requirements-dev tox
+.PHONY: clean install test watch docs release tox
