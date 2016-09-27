@@ -17,9 +17,16 @@ Changelog
 - small tweaks to analysis
 
 0.2.0
+-----
 
 2016-09-22
 
 - project create/open workflow
 - configuration file support
 
+0.2.4
+-----
+
+2016-09-27
+
+- bundling skel files in package

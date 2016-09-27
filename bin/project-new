@@ -5,7 +5,7 @@
 PROJECT_NAME="$1"
 
 WORK_PATH=~/Work
-PYTHON_BIN=/usr/local/bin/python
+PYTHON2_BIN=/usr/local/bin/python
 
 if [ -f ~/.diamond-patterns.conf  ]; then
     source ~/.diamond-patterns.conf
@@ -31,8 +31,8 @@ EOF
 function project-new() {
     mkdir "${WORK_PATH}/${PROJECT_NAME}"
     cd "${WORK_PATH}/${PROJECT_NAME}"
-    mkvirtualenv -a . -p ${PYTHON_BIN} "${PROJECT_NAME}"
-    project-git-init.sh "${PROJECT_NAME}"
+    mkvirtualenv -a . -p ${PYTHON2_BIN} "${PROJECT_NAME}"
+    project-git-init "${PROJECT_NAME}"
     project-workon "${PROJECT_NAME}"
 }
 

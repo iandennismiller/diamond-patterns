@@ -22,11 +22,11 @@ setup(
     scripts=[
         "bin/diamond",
         "bin/diamond-conf-init",
-        "bin/project-git-init.sh",
+        "bin/project-git-init",
         "bin/project-list",
         "bin/project-new",
         "bin/project-new3",
-        "bin/project-open.sh",
+        "bin/project-open",
         "bin/project-workon",
     ],
     long_description=read('Readme.rst'),

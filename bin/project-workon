@@ -7,7 +7,7 @@ PROJECT_NAME="$1"
 WORK_PATH=~/Work
 WORK_CMD="workon ${PROJECT_NAME}"
 EDIT_CMD="subl ."
-PROJECT_OPEN_CMD="project-open.sh"
+PROJECT_OPEN_CMD="project-open"
 
 if [ -f ~/.diamond-patterns.conf  ]; then
     source ~/.diamond-patterns.conf

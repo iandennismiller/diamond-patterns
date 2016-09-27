@@ -32,7 +32,7 @@ function project-new3() {
     mkdir "${WORK_PATH}/${PROJECT_NAME}"
     cd "${WORK_PATH}/${PROJECT_NAME}"
     mkvirtualenv -a . -p ${PYTHON3_BIN} "${PROJECT_NAME}"
-    project-git-init.sh "${PROJECT_NAME}"
+    project-git-init "${PROJECT_NAME}"
     project-workon "${PROJECT_NAME}"
 }
 
