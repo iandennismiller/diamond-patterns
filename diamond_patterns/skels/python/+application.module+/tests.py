@@ -8,8 +8,9 @@ from unittest import TestCase
 class BasicTestCase(TestCase):
     def test_basic(self):
         "ensure the minimum test works"
-        assert True
+        self.assertEqual()
 
     @attr("skip")
     def test_skip(self):
-        assert False
+        "this always fails, except when it is skipped"
+        self.assertTrue(False)

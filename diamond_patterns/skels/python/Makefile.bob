@@ -1,9 +1,7 @@
 # {{{ application.name }}} (c) {{{ author.name }}}
 
 SHELL=/bin/bash
-PROJECT_NAME={{{ application.name }}}
 MOD_NAME={{{ application.module }}}
-TEST_CMD=SETTINGS=$$PWD/etc/conf/testing.conf nosetests -w $(MOD_NAME)
 
 install:
 	python setup.py install
@@ -23,11 +21,11 @@ watch:
 	watchmedo shell-command -R -p "*.py" -c 'echo \\n\\n\\n\\nSTART; date; $(TEST_CMD) -c etc/nose/test.cfg; date' .
 
 test:
-	$(TEST_CMD) -c etc/nose/test.cfg
+	nosetests -w $(MOD_NAME) -c etc/tests.cfg
 
 docs:
 	rm -rf build/sphinx
-	SETTINGS=$$PWD/etc/conf/testing.conf sphinx-build -b html docs build/sphinx
+	sphinx-build -b html docs build/sphinx
 
 release:
 	# first: python setup.py register -r https://pypi.python.org/pypi
