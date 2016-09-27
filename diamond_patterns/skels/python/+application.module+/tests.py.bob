@@ -3,12 +3,13 @@
 
 from nose.plugins.attrib import attr
 from unittest import TestCase
+from . import main
 
 
 class BasicTestCase(TestCase):
     def test_basic(self):
         "ensure the minimum test works"
-        self.assertEqual()
+        self.assertEqual(main(1), 2)
 
     @attr("skip")
     def test_skip(self):

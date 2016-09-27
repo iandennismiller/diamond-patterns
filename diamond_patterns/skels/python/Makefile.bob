@@ -18,10 +18,13 @@ clean:
 	find . -name __pycache__ -delete
 
 watch:
-	watchmedo shell-command -R -p "*.py" -c 'echo \\n\\n\\n\\nSTART; date; $(TEST_CMD) -c etc/nose/test.cfg; date' .
+	watchmedo shell-command -R -p "*.py" -c 'date; $(TEST_CMD) -c etc/tests.cfg; date' .
 
 test:
 	nosetests -w $(MOD_NAME) -c etc/tests.cfg
+
+tox:
+	tox
 
 docs:
 	rm -rf build/sphinx
@@ -31,4 +34,4 @@ release:
 	# first: python setup.py register -r https://pypi.python.org/pypi
 	python setup.py sdist upload -r https://pypi.python.org/pypi
 
-.PHONY: clean install test watch docs release requirements requirements-dev
+.PHONY: clean install test watch docs release requirements requirements-dev tox
