@@ -2,7 +2,7 @@
 # based on https://github.com/Homebrew/brew/blob/master/docs/Python-for-Formula-Authors.md#installing
 # rebuild with 'make homebrew'
 
-PKG={{{ application.name }}}
+PKG={{{ application.module }}}
 
 source $(brew --prefix)/bin/virtualenvwrapper.sh
 
@@ -16,10 +16,10 @@ pip install homebrew-pypi-poet
 poet ${PKG} > /tmp/poet.rb
 
 # extract python package URL
-URL=$(perl -n000e 'print $1 while /^..resource\s\"{{{ application.name }}}\"\sdo\n\s+url\s\"(.*?)\"\n.*?\n..end\n\n/mg' /tmp/poet.rb)
+URL=$(perl -n000e 'print $1 while /^..resource\s\"{{{ application.module }}}\"\sdo\n\s+url\s\"(.*?)\"\n.*?\n..end\n\n/mg' /tmp/poet.rb)
 
 # remove package resource from poet manifest
-perl -0777 -i.original -pe 's/..resource\s\"{{{ application.name }}}\"\sdo\n.*?\n.*?\n..end\n\n//igs' /tmp/poet.rb
+perl -0777 -i.original -pe 's/..resource\s\"{{{ application.module }}}\"\sdo\n.*?\n.*?\n..end\n\n//igs' /tmp/poet.rb
 
 # determine sha256 checksum for python package
 curl -q -o /tmp/pkg.tgz ${URL}

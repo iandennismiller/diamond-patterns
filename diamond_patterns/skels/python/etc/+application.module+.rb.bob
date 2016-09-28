@@ -1,16 +1,2 @@
-# Homebrew Formula for {{{ application.module }}}
-# {{{ application.module }}} (c) {{{ author.name }}}
-# See instructions at https://github.com/Homebrew/brew/blob/master/docs/Python-for-Formula-Authors.md
-
-class {{{ application.module }}} < Formula
-  desc "{{{ application.module }}}"
-  homepage "https://github.com/ ... /{{{ application.module }}}"
-  url "https://files.pythonhosted.org/ ... /{{{ application.module }}}-0.1.0.tar.gz"
-  # sha256 ""
-
-  include Language::Python::Virtualenv
-
-  def install
-    virtualenv_install_with_resources
-  end
-end
+# Homebrew Formula
+# rebuild with 'make homebrew'
