@@ -6,6 +6,22 @@
 Overview
 --------
 
+.. image:: https://img.shields.io/github/stars/USERNAME/{{{ application.name }}}.svg?style=social&label=GitHub
+    :target: https://github.com/USERNAME/{{{ application.name }}}
+
+.. image:: https://img.shields.io/pypi/v/{{{ application.name }}}.svg
+    :target: https://pypi.python.org/pypi/{{{ application.name }}}
+
+.. image:: https://readthedocs.org/projects/{{{ application.name }}}/badge/?version=latest
+    :target: http://{{{ application.name }}}.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+.. image:: https://travis-ci.org/USERNAME/{{{ application.name }}}.svg?branch=master
+    :target: https://travis-ci.org/USERNAME/{{{ application.name }}}
+
+.. image:: https://coveralls.io/repos/github/USERNAME/{{{ application.name }}}/badge.svg?branch=master
+    :target: https://coveralls.io/github/USERNAME/{{{ application.name }}}?branch=master
+
 Installation
 ^^^^^^^^^^^^
 

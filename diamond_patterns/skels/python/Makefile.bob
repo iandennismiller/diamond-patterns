@@ -2,9 +2,13 @@
 
 SHELL=/bin/bash
 MOD_NAME={{{ application.module }}}
+TEST_CMD=nosetests -w $(MOD_NAME) -c etc/tests.cfg --with-coverage --cover-package=$(MOD_NAME)
 
 install:
 	python setup.py install
+
+dev:
+	pip install -r requirements-dev.txt
 
 clean:
 	rm -rf build dist *.egg-info
@@ -16,10 +20,10 @@ docs:
 	sphinx-build -b html docs build/sphinx
 
 watch:
-	watchmedo shell-command -R -p "*.py" -c 'date; nosetests -w $(MOD_NAME) -c etc/tests.cfg; date' .
+	watchmedo shell-command -R -p "*.py" -c 'date; $(TEST_CMD); date' .
 
 test:
-	nosetests -w $(MOD_NAME) -c etc/tests.cfg
+	$(TEST_CMD)
 
 tox:
 	tox
@@ -28,4 +32,4 @@ release:
 	# first: python setup.py register -r https://pypi.python.org/pypi
 	python setup.py sdist upload -r https://pypi.python.org/pypi
 
-.PHONY: clean install test watch docs release tox
+.PHONY: clean install test watch docs release tox dev
