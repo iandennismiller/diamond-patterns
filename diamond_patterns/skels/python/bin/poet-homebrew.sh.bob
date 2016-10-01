@@ -2,7 +2,7 @@
 # based on https://github.com/Homebrew/brew/blob/master/docs/Python-for-Formula-Authors.md#installing
 # rebuild with 'make homebrew'
 
-PKG={{{ application.module }}}
+PKG={{{ application.name }}}
 
 source $(brew --prefix)/bin/virtualenvwrapper.sh
 

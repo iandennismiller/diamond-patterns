@@ -5,8 +5,8 @@
 class DiamondPatterns < Formula
   desc "Diamond Patterns for creating projects"
   homepage "https://github.com/iandennismiller/diamond-patterns"
-  url "https://github.com/iandennismiller/diamond-patterns/archive/0.2.4.tar.gz"
-  # sha256 "c8ff734544352f250186c388206aba4feacb944e194ae136b06c71e910d26f94"
+  url "https://pypi.python.org/packages/4c/e5/0d6a9c7a2dee8dac367afa5f7e0b55d5a8307e13c7137b56f3c787b85b2c/diamond-patterns-0.2.7.tar.gz"
+  sha256 "b365189a4e5855b31391093ae01dd5464aea2a13c39f84bcbacb8302e943f88c"
 
   resource "Jinja2" do
     url "https://files.pythonhosted.org/packages/f2/2f/0b98b06a345a761bec91a079ccae392d282690c2d8272e708f4d10829e22/Jinja2-2.8.tar.gz"
