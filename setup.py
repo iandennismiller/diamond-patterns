@@ -21,7 +21,6 @@ setup(
     description="diamond-patterns scaffolds projects according to patterns.",
     scripts=[
         "bin/diamond",
-        "bin/diamond-conf-init",
     ],
     long_description=read('Readme.rst'),
     classifiers=[

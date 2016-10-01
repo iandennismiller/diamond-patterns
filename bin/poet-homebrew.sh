@@ -16,10 +16,10 @@ pip install homebrew-pypi-poet
 poet ${PKG} > /tmp/poet.rb
 
 # extract python package URL
-URL=$(perl -n000e 'print $1 while /^..resource\s\"diamond_patterns\"\sdo\n\s+url\s\"(.*?)\"\n.*?\n..end\n\n/mg' /tmp/poet.rb)
+URL=$(perl -n000e 'print $1 while /^..resource\s\"diamond-patterns\"\sdo\n\s+url\s\"(.*?)\"\n.*?\n..end\n\n/mg' /tmp/poet.rb)
 
 # remove package resource from poet manifest
-perl -0777 -i.original -pe 's/..resource\s\"diamond_patterns\"\sdo\n.*?\n.*?\n..end\n\n//igs' /tmp/poet.rb
+perl -0777 -i.original -pe 's/..resource\s\"diamond-patterns\"\sdo\n.*?\n.*?\n..end\n\n//igs' /tmp/poet.rb
 
 # determine sha256 checksum for python package
 curl -q -o /tmp/pkg.tgz ${URL}
