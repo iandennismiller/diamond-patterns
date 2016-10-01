@@ -17,17 +17,11 @@ def grep(attrname):
 
 setup(
     version=grep('__version__'),
-    name='Diamond-Patterns',
-    description="**Diamond-Patterns** scaffolds projects according to patterns.",
+    name='diamond-patterns',
+    description="diamond-patterns scaffolds projects according to patterns.",
     scripts=[
         "bin/diamond",
         "bin/diamond-conf-init",
-        "bin/project-git-init",
-        "bin/project-list",
-        "bin/project-new",
-        "bin/project-new3",
-        "bin/project-open",
-        "bin/project-workon",
     ],
     long_description=read('Readme.rst'),
     classifiers=[
