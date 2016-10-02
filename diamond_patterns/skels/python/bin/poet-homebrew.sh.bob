@@ -6,6 +6,26 @@ PKG={{{ application.name }}}
 
 source $(brew --prefix)/bin/virtualenvwrapper.sh
 
+if [ ! -z $VIRTUAL_ENV ]; then
+    echo "run 'deactivate' since this will not work inside virtualenv"
+    exit 1
+fi
+
+echo "one moment..."
+python - <<EOF
+import urllib2, codecs, json
+name = "{{{ application.name }}}"
+url = "https://pypi.io/pypi/{}/json".format(name)
+f = urllib2.urlopen(url)
+reader = codecs.getreader("utf-8")
+pkg_data = json.load(reader(f))
+f.close()
+print(pkg_data["releases"].keys())
+EOF
+echo "If the latest version is listed above, Press ENTER."
+echo "Otherwise, use ctrl-c to exit."
+read ok
+
 # create virtualenv and install
 mktmpenv
 cd ~/Work/${PKG}
