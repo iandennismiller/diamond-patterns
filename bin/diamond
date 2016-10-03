@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Pub2 (cc) 2016 Ian Dennis Miller
+# diamond-patterns (cc) 2016 Ian Dennis Miller
 
 import click
 import pkg_resources
@@ -33,6 +33,13 @@ def list_skels():
     for skel in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
         print("- {0}".format(skel))
     print("")
+
+
+@cli.command('version', short_help='show version')
+def version():
+    from diamond_patterns.__meta__ import __version__
+    print(__version__)
+
 
 if __name__ == '__main__':
     cli(obj={})
