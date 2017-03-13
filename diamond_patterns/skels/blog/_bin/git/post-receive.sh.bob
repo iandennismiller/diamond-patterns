@@ -14,6 +14,7 @@ source .settings.conf
 
 # update the repo
 export GIT_DIR=".git"
+git checkout media
 git pull
 
 # build
@@ -24,3 +25,4 @@ rsync -acv --delete _site/ "${PUBLISH_PATH}"
 
 # clean up
 make clean
+rm -rf media

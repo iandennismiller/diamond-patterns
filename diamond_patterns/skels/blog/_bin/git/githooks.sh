@@ -3,4 +3,4 @@
 
 source .settings.conf
 
-cp "_bin/post-receive.sh" "${GIT_REPO}/hooks/post-receive"
+cp "_bin/git/post-receive.sh" "${GIT_REPO}/hooks/post-receive"

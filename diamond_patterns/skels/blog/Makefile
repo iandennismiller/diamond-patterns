@@ -10,7 +10,10 @@ depends:
 	_bin/depends.sh
 
 githooks:
-	_bin/githooks.sh
+	_bin/git/githooks.sh
+
+init:
+	_bin/git/init.sh
 
 clean:
 	bundle exec jekyll clean
@@ -30,4 +33,4 @@ build:
 production:
 	JEKYLL_ENV=production bundle exec jekyll serve
 
-.PHONY: artwork depends new js serve incremental build production githooks clean
+.PHONY: artwork depends new js serve incremental build production githooks clean init

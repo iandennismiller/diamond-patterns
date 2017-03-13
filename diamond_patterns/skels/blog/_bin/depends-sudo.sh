@@ -4,13 +4,17 @@
 # This script should be run as root
 
 # ensure rvm is installed
-curl -sSL https://get.rvm.io | bash -s stable --ruby
-rvm install 2.3.0
-rvm use 2.3.0
-rvm rubygems latest
+if [ -z `which gem` ]; then
+    curl -sSL https://get.rvm.io | bash -s stable --ruby
+    rvm install 2.3.0
+    rvm use 2.3.0
+    rvm rubygems latest
+fi
 
 # ensure bundler is installed
-gem install bundler
+if [ -z `which bundler` ]; then
+    gem install bundler
+fi
 
 # ensure pip is current
 pip install -U pip
