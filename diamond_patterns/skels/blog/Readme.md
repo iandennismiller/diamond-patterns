@@ -1,6 +1,23 @@
 # website
 
 Welcome to your blog.
+This blog is based on Jekyll, the Ruby website generator.
+The site generator works automatically with github pages.
+Another mode of stand-alone operation is provided for any web/shell host via git hooks.
+
+## Installation
+
+This scaffold was originally built from http://github.com/iandennismiller/diamond-patterns.
+In most situations, the `diamond` command line program would have been used:
+
+    diamond --skel blog scaffold
+
+To operate the Jekyll site generator on a remote web/shell provider, execute the following Makefile target in the local working copy of the project.
+
+    make init
+
+That Makefile target will use the scripts available in `_bin/` to create a git repository on a remote host, install git hooks, and start building the static site each time changes are pushed to the repository.
+The effect is very similar to GitHub's implementation of their Jekyll-based site generator.
 
 ## Usage
 
@@ -20,9 +37,8 @@ The test website is available at [http://127.0.0.1:4000](http://127.0.0.1:4000).
 
 ### Regenerate javascript
 
+A primitive form of JavaScript pre-processing is available through the use of Jekyll templates.
+The files in `_js` can be rendered into a single file called `js/main.js` that is quicker to download.
+The javascript pre-processor is invoked with:
+
     make js
-
-## Installation
-
-    diamond --skel blog scaffold
-    make init
