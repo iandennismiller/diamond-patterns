@@ -18,7 +18,7 @@ def grep(attrname):
 setup(
     version=grep('__version__'),
     name='diamond-patterns',
-    description="diamond-patterns scaffolds projects according to patterns.",
+    description="Diamond-Patterns are scaffolds for knowledge work.  Use patterns to go faster.",
     scripts=[
         "bin/diamond",
         "bin/diamond.cmd",

@@ -1,7 +1,7 @@
 Diamond-Patterns
 ================
 
-**Diamond-Patterns**  scaffolds projects according to patterns.
+**Diamond-Patterns** are scaffolds for knowledge work.  Use patterns to go faster.
 
 Installation
 ------------

@@ -6,10 +6,18 @@ This document helps manage the development process.
 Release process
 ---------------
 
+Merge develop to master
+^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    checkout master
+    git merge develop
+
 Update Version
 ^^^^^^^^^^^^^^
 
-update version in `diamond_patterns/__meta__.py`
+Update version in `diamond_patterns/__meta__.py` to be the newly-released version.
 
 Commit to git
 ^^^^^^^^^^^^^
