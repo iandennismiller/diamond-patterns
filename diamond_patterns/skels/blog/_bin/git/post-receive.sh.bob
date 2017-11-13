@@ -5,6 +5,8 @@ if [ -f /usr/local/rvm/scripts/rvm ]; then
     source /usr/local/rvm/scripts/rvm
 fi
 
+# This value is hardcoded.
+# If WORKING_PATH is changed in .settings.conf, this value must be updated.
 pushd "{{{ working_path }}}"
 
 echo $PWD
