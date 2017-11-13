@@ -1,6 +1,15 @@
 Changelog
 =========
 
+0.3.0
+-----
+
+2017-11-13
+
+- refresh documentation
+- new skels, including "book"
+- Windows compatibility
+
 0.2.4
 -----
 

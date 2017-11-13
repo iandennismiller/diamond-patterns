@@ -5,6 +5,7 @@
 import click
 import pkg_resources
 import os
+import distutils
 import diamond_patterns
 
 
@@ -21,8 +22,24 @@ def scaffold(ctx):
     if ctx.obj['skel'] in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
         filename = pkg_resources.resource_filename('diamond_patterns', 'skels')
         pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
-        print(os.path.join(pathname, filename))
-        os.system("mrbob -w {0}/{1} -O .".format(os.path.join(pathname, filename), ctx.obj['skel']))
+
+        # if skel exists, remove it
+        if os.path.isdir(".skel"):
+            distutils.dir_util.remove_tree(".skel")
+
+        # create a local copy of the skel
+        full_path = os.path.join(pathname, filename, ctx.obj['skel'])
+        print(full_path)
+        distutils.dir_util.copy_tree(full_path, ".skel")
+
+        # invoke mr.bob with the local copy of the skel
+        cmd = "mrbob -w -O . .skel"
+        os.system(cmd)
+        # os.system("mrbob -w {0}/{1} -O .".format()
+
+        # clean up after ourselves
+        if os.path.isdir(".skel"):
+            distutils.dir_util.remove_tree(".skel")
     else:
         print("unrecognized skel: {0}".format(ctx.obj['skel']))
 
