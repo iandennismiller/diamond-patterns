@@ -64,7 +64,9 @@ To create an `article` based on Diamond-Patterns, try the following:
     cd ~/Documents/my-article
     diamond --skel article scaffold
 
-Documentation
--------------
+Resources
+---------
 
-http://diamond-patterns.readthedocs.io/
+- `Documentation <http://diamond-patterns.readthedocs.io/>`_
+- `GitHub Project Page <http://github.com/iandennismiller/diamond-patterns>`_
+- `Python Project on PyPi <http://pypi.python.org/pypi/Diamond-Patterns>`_
