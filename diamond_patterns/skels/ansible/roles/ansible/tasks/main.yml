@@ -1,4 +1,7 @@
 ---
+- name: Install zsh
+  apt: name=zsh state=present
+
 - name: Create the 'ansibl' group
   group: name=ansibl state=present
 
