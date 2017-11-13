@@ -10,7 +10,7 @@
 
 \begin{center}
  \vspace*{2cm}
- {\huge\bfseries {{{ project }}} \\}
+ {\huge\bfseries {{{ title }}} \\}
  \vspace*{0.75cm}
  {\huge$\backsim$ \\}
  \vspace*{0.75cm}
@@ -53,7 +53,7 @@ Copyright \copyright~2017 by {{{ author }}}.
 All Rights Reserved.
 
 \vspace*{12pt}
-\noindent \href{{{{website}}}}{{{{website}}}}
+\noindent \href{ {{{website}}} }{ {{{website}}} }
 
 \vspace*{12pt}
 \noindent

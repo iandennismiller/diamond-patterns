@@ -19,6 +19,9 @@ def cli(ctx, skel):
 @cli.command('scaffold', short_help='scaffold a folder with a skel.')
 @click.pass_context
 def scaffold(ctx):
+    from diamond_patterns.__meta__ import __version__
+    print("Diamond-Patterns", __version__)
+
     if ctx.obj['skel'] in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
         filename = pkg_resources.resource_filename('diamond_patterns', 'skels')
         pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
@@ -35,7 +38,6 @@ def scaffold(ctx):
         # invoke mr.bob with the local copy of the skel
         cmd = "mrbob -w -O . .skel"
         os.system(cmd)
-        # os.system("mrbob -w {0}/{1} -O .".format()
 
         # clean up after ourselves
         if os.path.isdir(".skel"):
@@ -46,6 +48,9 @@ def scaffold(ctx):
 
 @cli.command('list', short_help='list available skels.')
 def list_skels():
+    from diamond_patterns.__meta__ import __version__
+    print("Diamond-Patterns", __version__)
+
     print("Available skels:\n")
     for skel in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
         print("- {0}".format(skel))
