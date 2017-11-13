@@ -56,10 +56,15 @@ To list all of the available patterns:
 
     diamond list
 
-To create an article based on Diamond-Patterns, try the following:
+To create an `article` based on Diamond-Patterns, try the following:
 
 ::
 
     mkdir ~/Documents/my-article
     cd ~/Documents/my-article
     diamond --skel article scaffold
+
+Documentation
+-------------
+
+http://diamond-patterns.readthedocs.io/
