@@ -1,25 +1,39 @@
 Diamond-Patterns
 ================
 
-**Diamond-Patterns**  scaffolds projects according to patterns.
+**Diamond-Patterns** are scaffolds for knowledge work.  Use patterns to go faster.
 
 Installation
-^^^^^^^^^^^^
+------------
 
-Option 1: Install inside a virtual environment.
+UNIX
+^^^^
+
+Install on Linux, BSD, or OS X.  Supports system-wide installation and python virtual environments.
 
 ::
 
-    mkvirtualenv my-project
     pip install diamond-patterns
 
-Option 2: Install system-wide with Homebrew.
+OS X
+^^^^
+
+Install system-wide with Homebrew.
 
 ::
 
-    export REPO=https://raw.github.com/iandennismiller/diamond-patterns/master
-    export FILE=/etc/diamond-patterns.rb
-    brew install ${REPO}${FILE}
+    brew install https://raw.github.com/iandennismiller/diamond-patterns/master/etc/diamond-patterns.rb
+
+Windows
+^^^^^^^
+
+Diamond-patterns installs system-wide with Administrator privileges.
+
+::
+
+    start-process powershell –verb runAs
+    easy_install -U mr.bob==0.1.2
+    pip install diamond-patterns
 
 Usage
 ^^^^^
