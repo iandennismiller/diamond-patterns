@@ -9,7 +9,7 @@ install:
 	python setup.py install
 
 dev:
-	pip install -r requirements-dev.text
+	pip install -r .requirements-dev.txt
 
 clean:
 	rm -rf build dist *.egg-info *.pyc

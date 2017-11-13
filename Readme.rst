@@ -28,6 +28,7 @@ Windows
 ^^^^^^^
 
 Diamond-patterns installs system-wide with Administrator privileges.
+All you need is Python.
 
 ::
 
