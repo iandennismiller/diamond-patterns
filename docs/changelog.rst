@@ -1,20 +1,12 @@
 Changelog
 =========
 
-0.1.0
+0.2.4
 -----
 
-2016-08-07
+2016-09-27
 
-- initial release
-
-0.1.1
------
-
-2016-09-08
-
-- add jekyll website
-- small tweaks to analysis
+- bundling skel files in package
 
 0.2.0
 -----
@@ -24,9 +16,17 @@ Changelog
 - project create/open workflow
 - configuration file support
 
-0.2.4
+0.1.1
 -----
 
-2016-09-27
+2016-09-08
 
-- bundling skel files in package
+- add jekyll website
+- small tweaks to analysis
+
+0.1.0
+-----
+
+2016-08-07
+
+- initial release

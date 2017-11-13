@@ -21,7 +21,6 @@ Option 2: Install system-wide with Homebrew.
     export FILE=/etc/diamond-patterns.rb
     brew install ${REPO}${FILE}
 
-
 Usage
 ^^^^^
 

@@ -40,6 +40,7 @@ def grep(attrname):
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('_extensions'))
 
 # custom configuration -----------------------------------------------------
 this_path = os.path.dirname(os.path.abspath(__file__))
@@ -64,7 +65,7 @@ html_context = {
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'autoimage']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -128,27 +129,31 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ---------------------------------------------------
 
-import alabaster
+sys.path.append(os.path.abspath('_themes'))
+html_theme_path = ['_themes']
+html_theme = 'flask'
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
+# import alabaster
 
-html_theme_path = [alabaster.get_path()]
-html_theme = 'alabaster'
+# # The theme to use for HTML and HTML Help pages.  See the documentation for
+# # a list of builtin themes.
+
+# html_theme_path = [alabaster.get_path()]
+# html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 
-html_theme_options = {
-    'github_button': False,
-    'show_powered_by': False,
-    # 'analytics_id': "",
-    # 'logo': '',
-    # 'extra_nav_links': {
-    #     "pplapi Home": "http://pplapi.com",
-    # }
-}
+# html_theme_options = {
+#     'github_button': False,
+#     'show_powered_by': False,
+#     # 'analytics_id': "",
+#     # 'logo': '',
+#     # 'extra_nav_links': {
+#     #     "pplapi Home": "http://pplapi.com",
+#     # }
+# }
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -185,12 +190,19 @@ html_static_path = ['_static']
 # Custom sidebar templates, maps document names to template names.
 
 html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',
+    'index': [
+        'sidebarlogo.html',
+        'sidebarintro.html',
+        'localtoc.html',
         'searchbox.html',
-        'donate.html',
+        'version.html'
+    ],
+    '**': [
+        'sidebarlogo.html',
+        'localtoc.html',
+        # 'relations.html',
+        'searchbox.html',
+        'version.html'
     ]
 }
 
