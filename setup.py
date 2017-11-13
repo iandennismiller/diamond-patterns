@@ -18,7 +18,7 @@ def grep(attrname):
 setup(
     version=grep('__version__'),
     name='diamond-patterns',
-    description="diamond-patterns scaffolds projects according to patterns.",
+    description="Diamond-Patterns are scaffolds for knowledge work.  Use patterns to work faster.",
     scripts=[
         "bin/diamond",
         "bin/diamond.cmd",
@@ -32,7 +32,9 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: POSIX",
         "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Windows :: Windows 10",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.6",
         "Topic :: Office/Business",
     ],
     packages=find_packages(),
