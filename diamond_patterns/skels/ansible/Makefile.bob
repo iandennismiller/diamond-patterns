@@ -19,4 +19,7 @@ depends:
 ping:
 	ansible all -m ping
 
-.PHONY: dry-run install clean depends ping
+bootstrap:
+	bin/bootstrap.sh {{{ hostname }}}
+
+.PHONY: dry-run install clean depends ping bootstrap
