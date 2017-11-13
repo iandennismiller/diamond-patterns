@@ -3,6 +3,17 @@ Diamond-Patterns
 
 **Diamond-Patterns** are scaffolds for knowledge work.  Use patterns to go faster.
 
+The patterns currently included with Diamond-Patterns are:
+
+- **analysis**: An R project suitable for data analysis
+- **ansible**: A linux system configuration container
+- **article**: A LaTeX article with sections and graphics
+- **blog**: A blog based on Jekyll with auto-generating git hooks
+- **book**: A LaTeX book
+- **presentation**: An HTML5 presentation
+- **python**: A Python package
+- **website**: A website based on Jekyll
+
 Installation
 ------------
 
@@ -37,7 +48,15 @@ All you need is Python.
     pip install diamond-patterns
 
 Usage
-^^^^^
+-----
+
+To list all of the available patterns:
+
+::
+
+    diamond list
+
+To create an article based on Diamond-Patterns, try the following:
 
 ::
 
