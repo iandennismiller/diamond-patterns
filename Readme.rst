@@ -9,7 +9,7 @@ Installation
 UNIX
 ^^^^
 
-Install on Linux, BSD, or OS X.
+Install on Linux, BSD, or OS X.  Supports system-wide installation and python virtual environments.
 
 ::
 
@@ -18,7 +18,7 @@ Install on Linux, BSD, or OS X.
 OS X
 ^^^^
 
-Install with Homebrew.
+Install system-wide with Homebrew.
 
 ::
 
@@ -27,7 +27,7 @@ Install with Homebrew.
 Windows
 ^^^^^^^
 
-On Windows, diamond-patterns installs system-wide with Administrator privileges.
+Diamond-patterns installs system-wide with Administrator privileges.
 
 ::
 
