@@ -31,7 +31,13 @@ setup(
         "Intended Audience :: Science/Research",
         "License :: OSI Approved :: MIT License",
         "Operating System :: POSIX",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: POSIX :: BSD",
         "Operating System :: MacOS :: MacOS X",
+<<<<<<< Updated upstream
+=======
+        "Operating System :: Microsoft :: Windows :: Windows 10",
+>>>>>>> Stashed changes
         "Programming Language :: Python :: 2.7",
         "Topic :: Office/Business",
     ],
