@@ -5,8 +5,8 @@
 import click
 import pkg_resources
 import os
-import distutils
 import diamond_patterns
+from distutils import dir_util
 
 
 @click.group()
@@ -25,12 +25,12 @@ def scaffold(ctx):
 
         # if skel exists, remove it
         if os.path.isdir(".skel"):
-            distutils.dir_util.remove_tree(".skel")
+            dir_util.remove_tree(".skel")
 
         # create a local copy of the skel
         full_path = os.path.join(pathname, filename, ctx.obj['skel'])
         print(full_path)
-        distutils.dir_util.copy_tree(full_path, ".skel")
+        dir_util.copy_tree(full_path, ".skel")
 
         # invoke mr.bob with the local copy of the skel
         cmd = "mrbob -w -O . .skel"
@@ -39,7 +39,7 @@ def scaffold(ctx):
 
         # clean up after ourselves
         if os.path.isdir(".skel"):
-            distutils.dir_util.remove_tree(".skel")
+            dir_util.remove_tree(".skel")
     else:
         print("unrecognized skel: {0}".format(ctx.obj['skel']))
 
