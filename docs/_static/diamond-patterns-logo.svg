@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="diamond-patterns-logo.svg">
+   sodipodi:docname="diamond-patterns-logo.svg"
+   inkscape:export-filename="/Users/idm/Work/diamond-patterns/docs/_static/diamond-patterns-logo.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -70,17 +73,17 @@
      transform="translate(0,-932.36216)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:100%;font-family:'High Tower Text';-inkscape-font-specification:'High Tower Text, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;letter-spacing:-5.20999874px;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:100%;font-family:'High Tower Text';-inkscape-font-specification:'High Tower Text, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;letter-spacing:-5.20999874px;"
        x="320.14285"
        y="1020.9337"
        id="text4161"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4165"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:100%;font-family:'High Tower Text';-inkscape-font-specification:'High Tower Text, Normal';text-align:center;writing-mode:lr;text-anchor:middle;letter-spacing:-5.20999874px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:100%;font-family:'High Tower Text';-inkscape-font-specification:'High Tower Text, Normal';text-align:center;writing-mode:lr;text-anchor:middle;letter-spacing:-5.20999874px;stroke:#000000;stroke-opacity:1;fill:none;"
          x="320.14285"
          y="1020.9337">Diamon<tspan
-   style="letter-spacing:-8.47999943px"
+   style="letter-spacing:-8.47999943px;stroke:#000000;stroke-opacity:1;fill:none;"
    id="tspan4171">d-P</tspan>atterns</tspan></text>
   </g>
 </svg>
