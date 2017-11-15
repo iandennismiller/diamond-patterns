@@ -6,6 +6,7 @@
 # - http://github.com/iandennismiller/diamond-patterns
 
 from datetime import datetime
+from six.moves import input
 import sys
 import glob
 import os
@@ -14,7 +15,7 @@ import os
 def main():
     templates = map((lambda x: os.path.basename(x)), glob.glob("_templates/*.txt"))
     templates = map((lambda x: x[:-4]), templates)
-    category = raw_input("Which category? {{{0}}}: ".format(", ".join(templates)))
+    category = input("Which category? {{{0}}}: ".format(", ".join(templates)))
 
     try:
         with open("_templates/{0}.txt".format(category)) as f:
@@ -23,8 +24,8 @@ def main():
         print("the category is not recognized")
         sys.exit(1)
 
-    title = raw_input("Title: ")
-    tags = raw_input("Tags: ")
+    title = input("Title: ")
+    tags = input("Tags: ")
 
     timestamp = datetime.today().strftime("%Y-%m-%d %H:%M:%S")
     datestamp = datetime.today().strftime("%Y-%m-%d")

@@ -19,7 +19,24 @@ To operate the Jekyll site generator on a remote web/shell provider, execute the
 That Makefile target will use the scripts available in `_bin/` to create a git repository on a remote host, install git hooks, and start building the static site each time changes are pushed to the repository.
 The effect is very similar to GitHub's implementation of their Jekyll-based site generator.
 
+### Multiple git origin remotes
+
+It is possible to have one git remote function as a site generator (e.g. a web/shell host) while having a second remote for project management (e.g. GitLab).
+To have two git remotes, issue two `git remote set-url --add` commands:
+
+    git remote -v
+    git remote set-url --add --push origin ORIGINAL_URL
+    git remote set-url --add --push origin SECOND_URL
+
 ## Usage
+
+### Writing
+
+Use the built-in template engine to create new posts:
+
+    make new
+
+### Publishing
 
 Once the site is installed, deployment is as simple as pushing code to git.
 
