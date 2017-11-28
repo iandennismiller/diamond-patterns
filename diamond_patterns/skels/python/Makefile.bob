@@ -7,8 +7,8 @@ TEST_CMD=nosetests -w $(MOD_NAME) -c etc/tests.cfg --with-coverage --cover-packa
 install:
 	python setup.py install
 
-dev:
-	pip install -r requirements-dev.txt
+develop:
+	pip install -r .requirements-dev.txt
 
 clean:
 	rm -rf build dist *.egg-info
@@ -33,9 +33,12 @@ release:
 	# 2. python setup.py register # notify pypi of new package
 	python setup.py sdist upload
 
+coverage:
+	nosetests --with-xcoverage --cover-package=$(MOD_NAME) --cover-tests -c etc/tests.cfg
+
 # create a homebrew install script
 homebrew:
 	bin/poet-homebrew.sh
 	cp /tmp/{{{ application.name }}}.rb etc/{{{ application.name }}}.rb
 
-.PHONY: clean install test watch docs release tox dev homebrew
+.PHONY: clean install test watch docs release tox develop homebrew coverage
