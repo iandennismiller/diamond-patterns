@@ -21,6 +21,8 @@ Create a project for the website
     project-new3 www-project
     pip install diamond-patterns
     diamond --skel website scaffold
+    git add -A
+    got commit -am "initial commit"
 
 Now unpack this project to create a git repository on the remote host.
 
