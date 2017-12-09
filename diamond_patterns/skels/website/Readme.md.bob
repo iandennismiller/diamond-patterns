@@ -14,8 +14,20 @@ Create an Ansible role for this website.
 
     project-workon mccaul
     make www
+    vi playbook.yaml
+
+Create a project for the website
+
+    project-new3 www-project
+    pip install diamond-patterns
+    diamond --skel website scaffold
 
 Now unpack this project to create a git repository on the remote host.
 
-    make init
+    make git-init
 
+If this site should automatically rebuild when a git push is received:
+
+    make git-hooks
+
+Now push the changes to rebuild the website.

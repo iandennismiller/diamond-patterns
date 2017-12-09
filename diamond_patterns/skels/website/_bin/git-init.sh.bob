@@ -9,8 +9,8 @@ echo "This script will set up a remote host as a git repository."
 git remote -v
 
 ssh ${LOGIN}@${HOSTNAME} "git init --bare ~/site.git"
-git remote set-url origin --push --add ${LOGIN}@${HOSTNAME}:site.git
-git push
+git remote add origin ${LOGIN}@${HOSTNAME}:site.git
+git push --set-upstream origin master
 
 ssh ${LOGIN}@${HOSTNAME} "git clone ~/site.git ~/site"
 ssh ${LOGIN}@${HOSTNAME} "cd ~/site && make depends"

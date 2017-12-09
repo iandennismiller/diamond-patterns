@@ -13,11 +13,11 @@ new:
 publish:
 	_bin/publish.sh
 
+depends:
+	_bin/depends.sh
+
 install:
 	rsync -acv --delete _site/ ~/www/
-
-depends:
-	bundle install --path vendor/bundle
 
 serve:
 	bundle exec jekyll serve
