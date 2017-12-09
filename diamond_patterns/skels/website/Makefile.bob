@@ -10,25 +10,11 @@ artwork:
 new:
 	_bin/template.py
 
-js:
-	java -jar ~/Library/Code/compiler.jar --js _site/js/main.js --js_output_file js/main.min.js
-
 publish:
 	_bin/publish.sh
 
-githooks:
-	cp _bin/publish.sh ~/site.git/hooks/post-receive
-
-init:
-	git remote -v
-	ssh {{{ project.login }}}@{{{ production.host }}} "git init --bare ~/site.git"
-	git remote set-url origin --push --add {{{ project.login }}}@{{{ production.host }}}:site.git
-	git push
-	ssh {{{ project.login }}}@{{{ production.host }}} "git clone ~/site.git ~/site"
-	ssh {{{ project.login }}}@{{{ production.host }}} "cd ~/site && make depends"
-	echo "NB: Now run the following:"
-	echo "git remote set-url origin --push --add LOGIN@ORIGINAL-REPO.git"
-	echo "git push"
+install:
+	rsync -acv --delete _site/ ~/www/
 
 depends:
 	bundle install --path vendor/bundle
@@ -46,7 +32,13 @@ build:
 production:
 	JEKYLL_ENV=production bundle exec jekyll serve
 
-install:
-	rsync -acv --delete _site/ ~/www/
+git-hooks:
+	_bin/git-hooks.sh
 
-.PHONY: artwork depends new js publish serve incremental build production install all
+git-init:
+	_bin/git-init.sh
+
+js:
+	java -jar ~/Library/Code/compiler.jar --js _site/js/main.js --js_output_file js/main.min.js
+
+.PHONY: artwork depends new js publish serve incremental build production install all git-init git-hooks
