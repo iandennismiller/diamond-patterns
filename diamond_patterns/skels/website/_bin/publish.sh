@@ -1,9 +1,12 @@
 #!/bin/bash
 # (cc) 2016 diamond-patterns
 
-source /usr/local/rvm/scripts/rvm
+if [ -f /usr/local/rvm/scripts/rvm ]; then
+    source /usr/local/rvm/scripts/rvm
+fi
 
-cd ~/$(whoami)
+echo "publish site"
+cd ~/site
 git pull
-JEKYLL_ENV=production bundle exec jekyll build
-rsync -acv --delete _site/ /var/www/$(whoami)/
+make build install
+echo "OK"

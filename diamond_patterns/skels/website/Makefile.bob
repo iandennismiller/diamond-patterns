@@ -1,20 +1,37 @@
 # {{{ project.name }}}
 # {{{ project.license }}}
 
+all:
+	@echo OK
+
 artwork:
 	_bin/artwork.sh
 
-depends:
-	_bin/depends.sh
-
 new:
-	_bin/new.py
+	_bin/template.py
 
-minify:
+js:
 	java -jar ~/Library/Code/compiler.jar --js _site/js/main.js --js_output_file js/main.min.js
 
 publish:
-	ssh {{{ project.login }}}@{{{ production.host }}} "{{{ project.login }}}/_bin/publish.sh"
+	_bin/publish.sh
+
+githooks:
+	cp _bin/publish.sh ~/site.git/hooks/post-receive
+
+init:
+	git remote -v
+	ssh {{{ project.login }}}@{{{ production.host }}} "git init --bare ~/site.git"
+	git remote set-url origin --push --add {{{ project.login }}}@{{{ production.host }}}:site.git
+	git push
+	ssh {{{ project.login }}}@{{{ production.host }}} "git clone ~/site.git ~/site"
+	ssh {{{ project.login }}}@{{{ production.host }}} "cd ~/site && make depends"
+	echo "NB: Now run the following:"
+	echo "git remote set-url origin --push --add LOGIN@ORIGINAL-REPO.git"
+	echo "git push"
+
+depends:
+	bundle install --path vendor/bundle
 
 serve:
 	bundle exec jekyll serve
@@ -29,4 +46,7 @@ build:
 production:
 	JEKYLL_ENV=production bundle exec jekyll serve
 
-.PHONY: artwork depends new minify publish serve incremental build production
+install:
+	rsync -acv --delete _site/ ~/www/
+
+.PHONY: artwork depends new js publish serve incremental build production install all

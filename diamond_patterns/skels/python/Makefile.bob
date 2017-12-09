@@ -7,6 +7,9 @@ TEST_CMD=nosetests -w $(MOD_NAME) -c etc/tests.cfg --with-coverage --cover-packa
 install:
 	python setup.py install
 
+requirements:
+	pip install -r requirements.txt
+
 develop:
 	pip install -r .requirements-dev.txt
 
@@ -41,4 +44,4 @@ homebrew:
 	bin/poet-homebrew.sh
 	cp /tmp/{{{ application.name }}}.rb etc/{{{ application.name }}}.rb
 
-.PHONY: clean install test watch docs release tox develop homebrew coverage
+.PHONY: clean install test watch docs release tox develop homebrew coverage requirements
