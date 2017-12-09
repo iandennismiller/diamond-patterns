@@ -6,7 +6,7 @@ if [ -f /usr/local/rvm/scripts/rvm ]; then
 fi
 
 echo "publish site"
-cd ~/site
-git pull
-make build install
+GIT_DIR=~/site/.git
+cd ~/site && git pull
+cd ~/site && make build install
 echo "OK"
