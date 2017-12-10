@@ -44,8 +44,13 @@ If this site should automatically rebuild when a git push is received:
 
 Re-add the original URL for origin so it backs up to the project repo:
 
-    git remote set-url origin --push --add LOGIN@ORIGINAL-REPO.git
-    git push -u origin --all
-    git push -u origin --tags
+    git remote -v
+    git remote set-url origin --push --add Login@First-Repo.git
+    git remote set-url origin --push --add Login@Second-Repo.git
+    git remote -v
 
 Now push the changes to rebuild the website.
+
+    git push --set-upstream origin master
+    git push -u origin --all
+    git push -u origin --tags
