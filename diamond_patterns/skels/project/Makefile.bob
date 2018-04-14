@@ -1,5 +1,4 @@
-# Ian Dennis Miller
-# project-management skeleton makefile
+# Project Management Makefile
 
 PROJECT_NAME={{{project_name}}}
 

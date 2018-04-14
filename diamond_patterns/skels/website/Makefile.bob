@@ -1,5 +1,4 @@
-# {{{ project.name }}}
-# {{{ project.license }}}
+# Website Makefile
 
 all:
 	@echo OK

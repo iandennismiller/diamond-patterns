@@ -1,4 +1,4 @@
-# {{{ application.name }}} (c) {{{ author.name }}}
+# Python Makefile
 
 SHELL=/bin/bash
 MOD_NAME={{{ application.module }}}

@@ -1,4 +1,4 @@
-# Ian Dennis Miller
+# Article Makefile
 
 # ignore the following LaTeX commands when spell checking
 NOSPELL=--add-tex-command="bibliographystyle op" --add-tex-command="bibliography op" --add-tex-command="thispagestyle op"

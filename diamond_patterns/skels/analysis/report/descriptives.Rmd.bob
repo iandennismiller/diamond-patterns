@@ -1,6 +1,6 @@
 ---
 title: '{{{project.name}}}: Descriptives'
-author: "Ian Dennis Miller and Another Author"
+author: "{{{ author.name }}}"
 output:
   html_document:
     toc: yes
@@ -21,4 +21,4 @@ opts_chunk$set(cache=FALSE)
 Exploratory Data Analysis
 ======
 
-This 
+This

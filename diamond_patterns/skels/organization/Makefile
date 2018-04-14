@@ -1,3 +1,5 @@
+# Organization Makefile
+
 all:
 	@echo OK
 
