@@ -1,0 +1,33 @@
+Installation
+============
+
+UNIX
+^^^^
+
+Install on Linux, BSD, or OS X.  Supports system-wide installation and python virtual environments.
+
+::
+
+    pip install diamond-patterns
+
+OS X
+^^^^
+
+Install system-wide with Homebrew.
+
+::
+
+    brew install https://raw.github.com/iandennismiller/diamond-patterns/master/etc/diamond-patterns.rb
+
+Windows
+^^^^^^^
+
+Diamond-patterns installs system-wide with Administrator privileges.
+All you need is Python.
+
+::
+
+    start-process powershell –verb runAs
+    easy_install -U mr.bob==0.1.2
+    pip install diamond-patterns
+
