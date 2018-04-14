@@ -1,15 +1,9 @@
 ---
-- name: Install zsh
-  apt: name=zsh state=present
-
 - name: Create the '{{{ username }}}' user
-  user: name={{{ username }}} shell=/bin/bash
+  user: name={{{ username }}} shell=/bin/zsh
 
-- name: Creates directory
+- name: Creates .ssh directory
   file: path=/home/{{{ username }}}/.ssh state=directory owner={{{ username }}} group={{{ username }}} mode=0700
 
 - name: Copy ssh public key
   copy: src=files/id_rsa.pub dest=/home/{{{ username }}}/.ssh/authorized_keys owner={{{ username }}} group={{{ username }}} mode=0400
-
-- name: Set zsh as the default shell for {{{ username }}}
-  shell: /usr/bin/chsh -s /usr/bin/zsh {{{ username }}} && touch /home/{{{ username }}}/.zsh-selected creates=/home/{{{ username }}}/.zsh-selected

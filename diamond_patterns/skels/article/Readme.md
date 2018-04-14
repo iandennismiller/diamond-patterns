@@ -1,4 +1,3 @@
-# usage
+# Article
 
-make
-open .build
+http://diamond-patterns.readthedocs.io/en/latest/patterns/article.html

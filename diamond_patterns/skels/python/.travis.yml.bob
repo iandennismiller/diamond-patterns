@@ -1,11 +1,10 @@
 language: python
 cache: pip
 python:
-  - 2.7
-  - 3.5
+  - 3.6
 install:
-  - make dev install
+  - make develop install
 script:
-  - nosetests -w {{{ application.module }}} -c etc/tests.cfg --with-coverage --cover-package={{{ application.module }}}
+  - make coverage
 after_success:
-  - coveralls --rcfile=.coveragerc
+  - coveralls

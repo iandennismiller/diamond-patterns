@@ -1,20 +1,23 @@
 # {{{ project.name }}}
 # {{{ project.license }}}
 
+all:
+	@echo OK
+
 artwork:
 	_bin/artwork.sh
+
+new:
+	_bin/template.py
+
+publish:
+	_bin/publish.sh
 
 depends:
 	_bin/depends.sh
 
-new:
-	_bin/new.py
-
-minify:
-	java -jar ~/Library/Code/compiler.jar --js _site/js/main.js --js_output_file js/main.min.js
-
-publish:
-	ssh {{{ project.login }}}@{{{ production.host }}} "{{{ project.login }}}/_bin/publish.sh"
+install:
+	rsync -acv --delete _site/ ~/www/
 
 serve:
 	bundle exec jekyll serve
@@ -29,4 +32,13 @@ build:
 production:
 	JEKYLL_ENV=production bundle exec jekyll serve
 
-.PHONY: artwork depends new minify publish serve incremental build production
+git-hooks:
+	_bin/git-hooks.sh
+
+git-init:
+	_bin/git-init.sh
+
+js:
+	java -jar ~/Library/Code/compiler.jar --js _site/js/main.js --js_output_file js/main.min.js
+
+.PHONY: artwork depends new js publish serve incremental build production install all git-init git-hooks
