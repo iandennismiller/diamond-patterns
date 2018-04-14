@@ -1,16 +1,17 @@
 Ansible: A linux system configuration container
 ===============================================
 
-# ansible
-
 This pattern provides for the management of a cloud of Linux machines.
 It is simple enough to manage a single machine, but ansible is capable of easily scaling up to support lots of similar machines.
 
-## bootstrapping
+bootstrapping
+-------------
 
 Ansible requires python on both the local host and the remote host.
 In addition, the `ansible` python packages need to be installed on both sides.
 Lastly, a designated user must be created for remote administration of the host via ssh.
+
+::
 
     make depends
     make bootstrap
@@ -18,7 +19,8 @@ Lastly, a designated user must be created for remote administration of the host 
 
 If the ping succeeds - i.e. it replies with a pong - then the system is now ready to be controlled with ansible.
 
-## usage
+usage
+-----
 
 Ansible uses 3 key files to manage hosts:
 
@@ -34,14 +36,20 @@ Most of the action happens in `/roles/WHATEVER/tasks/main.yaml`.
 
 A simple task looks like:
 
+::
+
     ---
     - name: Create the 'testing' user
       user: name=testing shell=/bin/zsh
 
 To perform a dry-run of the changes:
 
+::
+
     make dry-run
 
 Finally, to apply the changes to the host:
+
+::
 
     make install
