@@ -8,7 +8,7 @@ Installation
 
 Diamond-Patterns requires Python 3.
 `pip` is the recommended way to install Diamond-Patterns.
-`Installation documentation is available online <http://diamond-patterns.readthedocs.io/install.html>`_.
+`Installation documentation is available online <http://diamond-patterns.readthedocs.io/en/latest/install.html>`_.
 
 ::
 
