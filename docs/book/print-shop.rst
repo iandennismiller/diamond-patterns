@@ -1,11 +1,10 @@
-# Printing at a Shop
-
-Ian Dennis Miller
-2017
+Printing at a Shop
+==================
 
 The book can be printed at a local print shop by providing the cover and inners as PDF files.  The product needs to be specified to the print shop using a distinct vocabulary.
 
-## Inner
+Inner
+-----
 
 - source PDF:
     + page count: XXX
@@ -16,7 +15,8 @@ The book can be printed at a local print shop by providing the cover and inners 
     + paper: 20# white
     + ink: black
 
-## Cover
+Cover
+-----
 
 - sources:
     + full bleed PDF: not letter size, preferred
@@ -25,6 +25,7 @@ The book can be printed at a local print shop by providing the cover and inners 
     + paper: 65# white card stock
     + ink: black
 
-## Binding
+Binding
+-------
 
 - perfect binding

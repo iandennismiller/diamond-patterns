@@ -1,14 +1,13 @@
-# binding
-
-Ian Dennis Miller
-2017
+Binding with Staples
+====================
 
 My preferred home binding method uses staples and tape. This is a hybrid between saddle stitching and perfect binding.  This results in a "perfect binding" similar to lots of paperback books - except without the glue.
 
 - https://en.wikipedia.org/wiki/Bookbinding
 - https://www.thoughtco.com/what-is-perfect-binding-1077757
 
-## materials
+materials
+---------
 
 The staples and tape method requires the following supplies and tools:
 
@@ -28,7 +27,8 @@ The staples and tape method requires the following supplies and tools:
 - guillotine style paper cutter
     + Fiskars Deluxe Craft Bypass Paper Trimmer 12", 197300-1001
 
-## establish signatures
+establish signatures
+--------------------
 
 - collate the printed pile into 4-sheet signatures
 - fold 4-page signatures in half with a crease
@@ -46,7 +46,8 @@ The staples and tape method requires the following supplies and tools:
 - repeat crease with crease tool
 - secure the book with binder clips on the top and the bottom
 
-## build spine
+build spine
+-----------
 
 - apply the first tape spine
     + cut an 8.5-inch piece of white fabric tape
@@ -68,7 +69,8 @@ The staples and tape method requires the following supplies and tools:
     + create a 90-degree ridge along both edges of the spine
     + the spine should be squared
 
-## attach cover
+attach cover
+------------
 
 - pre-fold the cover to establish spine
 - cut an 8.5-inch piece of white fabric tape

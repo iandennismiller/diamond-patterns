@@ -1,9 +1,8 @@
-# Printing at Home
+Printing at Home
+================
 
-Ian Dennis Miller
-2017
-
-## signatures and imprints
+signatures and imprints
+-----------------------
 
 A 4-page imposition means 4 pages on a single double-sided sheet of paper (i.e. 2up, 2-sided).  4 sheets per signature produces 16 pages per signature. This is not a 16-page signature; it is a 4x4-page signature. The goal of this process is to create the number of 4x4-page signatures required to print the entire book.
 
@@ -14,7 +13,8 @@ References:
 - https://en.wikipedia.org/wiki/Bookbinding
 - https://www.designersinsights.com/designer-resources/understanding-and-working-with-print/
 
-## rendering PDF as print signatures
+rendering PDF as print signatures
+---------------------------------
 
 Execute `make signatures` to convert `mybook.pdf` into a book.
 The result is two PDFs:
@@ -24,7 +24,8 @@ The result is two PDFs:
 
 First the odd pages are printed, then the pile is sent through the printer a second time to print the even pages on the other side of the papers.
 
-## printing the book
+printing the book
+-----------------
 
 - set up printer for straight-through printing (no rollers/page flips)
 - open odd-page PDF; print all sheets

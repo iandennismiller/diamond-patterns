@@ -1,47 +1,54 @@
-# Printing with CreateSpace
+Printing with CreateSpace
+=========================
 
-Ian Dennis Miller
-2017
-
-## URLs for book
+URLs for book
+-------------
 
 - https://www.createspace.com/
 - https://www.amazon.com/dp/
 
-## Setup
+Setup
+-----
 
-### Title Information
+Title Information
+^^^^^^^^^^^^^^^^^
 
-- title: {{{ title }}}
-- subtitle: {{{ subtitle }}}
-- author: {{{ author }}}
+- title:
+- subtitle:
+- author:
 - edition number: 1
 
-### ISBN
+ISBN
+^^^^
 
 - ISBN-13: XXXX
 - ISBN-10: XXXX
 
-### Interior
+Interior
+^^^^^^^^
 
 - 5.5 x 8.5in, 13.97 x 21.59cm
 - black & white on white paper
 - XXX pages
 
-### Cover
+Cover
+^^^^^
 
 - cover finish: glossy
 
-## Distribute
+Distribute
+----------
 
-### Channels
+Channels
+^^^^^^^^
 
 - amazon.com
 - amazon.eu
 - createspace estore
 - libraries & academic institutions
 
-### Pricing
+Pricing
+^^^^^^^
 
 - usd: XXX
     + Amazon.com: XXX USD
@@ -52,23 +59,27 @@ Ian Dennis Miller
 - eur: XXX
     + Amazon Europe: XXX EUR
 
-### Description
+Description
+^^^^^^^^^^^
 
 <p>
 <b>TITLE</b> blah blah
 </p>
 
-#### BISAC
+BISAC
+^^^^^
 
 - XXX
 - XXX
 
-#### Author Biography
+Author Biography
+^^^^^^^^^^^^^^^^
 
 <p>
 Blah
 </p>
 
-#### Search Keywords
+Search Keywords
+^^^^^^^^^^^^^^^
 
 one, two, three

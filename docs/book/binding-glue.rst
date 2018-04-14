@@ -1,11 +1,10 @@
-# Glue Binding
-
-Ian Dennis Miller
-2017
+Glue Binding
+============
 
 https://www.thoughtco.com/what-is-perfect-binding-1077757
 
-## materials
+materials
+---------
 
 - heavy-duty white glue
 - several clips large enough to clamp around the signatures of the book
@@ -13,7 +12,8 @@ https://www.thoughtco.com/what-is-perfect-binding-1077757
 - cotton swabs
 - two flat wooden paint-stirring sticks
 
-## instructions
+instructions
+------------
 
 - Assemble the folded signatures of the book in the proper order. Jog them toward the spine for an even edge.
 - Place one wooden stick on the front of the assembled pages and one on the back positioned close to the spine, but not touching. Position the clamps over the spine and the wooden sticks. Clamp everything securely. The sticks prevent the clamps from making indentations in the pages of the book.

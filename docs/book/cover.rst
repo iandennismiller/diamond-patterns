@@ -1,15 +1,15 @@
-# Cover
+Cover
+=====
 
-Ian Dennis Miller
-2017
-
-## source files in `artwork/cover`
+source files in `artwork/cover`
+-------------------------------
 
 Various covers may be specified depending on the width of the spine, which is determined by the total page count.  For 161-170 pages, use the `170p` spine.
 
 - `170p/blah.svg`
 
-## calculations for cover
+calculations for cover
+----------------------
 
 The cover is a single sheet that wraps the front, back, and spine of a book.  Since the spine width is determined by how thick the spine is, and the number of pages in the book determines thickness, you cannot know how wide the cover is until you know how many pages you have.
 
@@ -19,7 +19,8 @@ CreateSpace has a cover template builder here:
 
 https://www.createspace.com/Help/Book/Artwork.do
 
-### 130 pages
+130 pages
+^^^^^^^^^
 
 126 pages, rounded up to 130.
 
@@ -27,7 +28,8 @@ https://www.createspace.com/Help/Book/Artwork.do
 - width: .125 + 5.5 + .29276 + 5.5 + .125 = 11.54276
 - height: .125 + 8.5 + .125 = 8.75
 
-### 160 pages
+160 pages
+^^^^^^^^^
 
 157 pages, rounded up to 160.
 
@@ -35,7 +37,8 @@ https://www.createspace.com/Help/Book/Artwork.do
 - width: .125 + 5.5 + .36032 + 5.5 + .125 = 11.61032
 - height: .125 + 8.5 + .125 = 8.75
 
-### 170 pages
+170 pages
+^^^^^^^^^
 
 163 pages, rounded up to 170.
 
@@ -43,7 +46,8 @@ https://www.createspace.com/Help/Book/Artwork.do
 - width: .125 + 5.5 + .38284 + 5.5 + .125 = 11.63284
 - height: .125 + 8.5 + .125 = 8.75
 
-## print cover as letter-sized nobleed
+print cover as letter-sized nobleed
+-----------------------------------
 
 For home printing, the cover needs to fit on a letter sheet of paper.  This basically works as long as the book is milled to 5.25 x 8.5, because the 0.5 inches you cut off is about equivalent to the spine.
 
