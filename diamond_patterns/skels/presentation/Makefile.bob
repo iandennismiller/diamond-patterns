@@ -1,5 +1,4 @@
-# {{{ project.name }}}
-# {{{ author.name }}}
+# Presentation Makefile
 
 PROJECT={{{ project.name }}}
 

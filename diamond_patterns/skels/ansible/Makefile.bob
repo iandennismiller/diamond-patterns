@@ -1,4 +1,4 @@
-# ansible state (c) Ian Dennis Miller
+# Ansible Makefile
 
 SHELL=/bin/bash
 

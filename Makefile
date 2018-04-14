@@ -1,5 +1,4 @@
-# Ian Dennis Miller
-# diamond makefile
+# Diamond-Patterns Makefile
 
 SHELL=/bin/bash
 MOD_NAME=project_system

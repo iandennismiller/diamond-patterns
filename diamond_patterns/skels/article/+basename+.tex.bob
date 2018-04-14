@@ -11,8 +11,8 @@
 
 \shorttitle{Short Title}
 \title{Title Here}
-\twoauthors{Ian Dennis Miller}{Other Author}
-\twoaffiliations{University of Toronto}{University of Toronto}
+\twoauthors{ {{{ author.name }}} }{Other Author}
+\twoaffiliations{Some University}{Some University}
 
 \abstract{\input{sections/abstract}}
 

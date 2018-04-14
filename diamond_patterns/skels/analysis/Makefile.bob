@@ -1,6 +1,4 @@
-# Ian Dennis Miller
-# {{{ project.name }}}
-# http://imiller.utsc.utoronto.ca
+# Analysis Makefile
 
 PDF = report/descriptives.pdf
 

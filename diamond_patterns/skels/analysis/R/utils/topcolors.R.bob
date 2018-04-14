@@ -1,4 +1,4 @@
-# Ian Dennis Miller
+# {{{ author.name }}}
 # {{{ project.name }}}
 # topcolors: functions that interface with TopColors services
 
@@ -86,14 +86,14 @@ topcolors_liwc_names = function() {
     "you"
   ))
 }
-  
+
 topcolors_wordlist = function(wordlist, host, user, password, url) {
     curl = getCurlHandle()
     curlSetOpt(cookiejar="cookies.txt", followlocation = TRUE, curl=curl)
 
     # log in
     html=postForm(paste0(host, "/user/login"), email="guest", password="guest", curl=curl)
-    
+
     resp = getURL(url, curl=curl)
     keywords = data.table(read.csv(text = resp))
 

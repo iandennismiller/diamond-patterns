@@ -1,4 +1,4 @@
-# Ian Dennis Miller
+# {{{ author.name }}}
 # {{{ project.name }}}
 # write values for reuse in LaTeX
 
@@ -30,29 +30,29 @@ latex_write_val = function(filename, prefix, key, value) {
 latex_lm_write = function(model, fit, filename, name=FALSE) {
   if (name == FALSE) {
     name = model_str(as.character(model))
-  }  
+  }
   cat('\n% glm: ', as.character(model), '\n', sep="", file=filename, append=TRUE)
   latex_declare(name, filename)
 
   tmp_lm_results = lm(model, data=fit$data)
   tmp_betas = lm.beta(fit)
-  
+
   latex_write_val(filename=filename, prefix=name, key="df", value=fit$df.residual)
   latex_write_val(filename=filename, prefix=name, key="adjr2", value=summary(tmp_lm_results)$adj.r.squared)
   latex_write_val(filename=filename, prefix=name, key="bic", value=bic(fit))
-  
+
   for (dimension_name in attr(getSummary(fit)$coef, "dimnames")[[1]]) {
     est = getSummary(fit)$coef[[dimension_name,"est"]]
     p = getSummary(fit)$coef[[dimension_name,"p"]]
     stat = getSummary(fit)$coef[[dimension_name,"stat"]]
-    
+
     tmp_prefix = paste0(name, '/', model_str(dimension_name))
-    latex_declare(tmp_prefix, filename)    
+    latex_declare(tmp_prefix, filename)
     latex_write_val(filename=filename, prefix=tmp_prefix, key="estimate", value=est)
     latex_write_val(filename=filename, prefix=tmp_prefix, key="p", value=p)
     latex_write_val(filename=filename, prefix=tmp_prefix, key="t", value=stat)
   }
-  
+
   for (beta_name in names(tmp_betas)) {
     latex_write_val(filename=filename, prefix=name, key=paste0(model_str(beta_name), "/beta"), value=tmp_betas[[beta_name]])
   }
