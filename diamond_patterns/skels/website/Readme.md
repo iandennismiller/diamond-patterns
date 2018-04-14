@@ -1,6 +1,6 @@
 # website
 
-Welcome to {{{ project.name }}}!
+http://diamond-patterns.readthedocs.io/en/latest/patterns/website.html
 
 To run the local server:
 

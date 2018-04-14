@@ -1,13 +1,3 @@
 # Readme
 
-The diamond-patterns Organization skel is used to scaffold a democratic organization governed by an online constitutional website.  The following secretarial functions are provided in the Makefile:
-
-## `make bill`
-
-## `make post`
-
-## `make minutes`
-
-## `make build`
-
-## `make serve`
+http://diamond-patterns.readthedocs.io/en/latest/patterns/organization.html

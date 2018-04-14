@@ -1,6 +1,8 @@
 {{{ application.name }}}
 =============
 
+http://diamond-patterns.readthedocs.io/en/latest/patterns/python.html
+
 {{{ description.short }}}
 
 .. image:: https://img.shields.io/github/stars/USERNAME/{{{ application.name }}}.svg?style=social&label=GitHub

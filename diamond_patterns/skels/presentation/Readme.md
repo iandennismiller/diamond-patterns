@@ -1,4 +1,6 @@
-# {{{ project.name }}}
+# Presentation
+
+http://diamond-patterns.readthedocs.io/en/latest/patterns/presentation.html
 
 - Build this presentation with `make`.
 - This presentation builds into `/docs`.
