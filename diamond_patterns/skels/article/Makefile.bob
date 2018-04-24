@@ -61,4 +61,8 @@ open:
 count:
 	detex $(PROJECT).tex |wc
 
+products:
+	mkdir -p products
+	cp .build/$(PROJECT).pdf products
+
 .PHONY: all clean manuscript doc spell html open count timestamp journal watch products
