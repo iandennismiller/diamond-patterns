@@ -38,12 +38,10 @@ timestamp:
 	@echo "Wrote timestamp TeX in: .build/gitinfo.tex"
 
 doc: html
-	pandoc -r html -R -w markdown .build/$(PROJECT).html | perl ~/bin/html-table2pandoc.pl > .build/tmp.md
+	pandoc -r html -w markdown .build/$(PROJECT).html | perl bin/html-table2pandoc.pl > .build/tmp.md
 	sed 's/^### /\'$$'\n### /g' .build/tmp.md > .build/tmp2.md
 	sed 's/^### /\'$$'\n### /g' .build/tmp2.md > .build/tmp3.md
-	#convert graphic/simple-slopes.pdf dogwhistles0x.png
 	pandoc -f markdown -t docx -o .build/$(PROJECT).docx .build/tmp3.md
-	#rm dogwhistles0x.png
 
 html:
 	htlatex $(PROJECT).tex "xhtml,word"
@@ -64,5 +62,6 @@ count:
 products:
 	mkdir -p products
 	cp .build/$(PROJECT).pdf products
+	-cp .build/$(PROJECT).docx products
 
 .PHONY: all clean manuscript doc spell html open count timestamp journal watch products
