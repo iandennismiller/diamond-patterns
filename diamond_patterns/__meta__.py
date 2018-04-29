@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__version__ = '0.3.5rc2'
+__version__ = '0.3.5rc3'
 __project__ = 'diamond-patterns'
 __author__ = 'Ian Dennis Miller'
 __email__ = 'iandennismiller@gmail.com'
