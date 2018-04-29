@@ -33,7 +33,6 @@ timestamp:
 	@echo '\item[build time]{\\texttt{'`date`"}}" >> .build/gitinfo.tex
 	@echo '\item[git revision]{\\texttt{'`git rev-parse --verify HEAD`"}}" >> .build/gitinfo.tex
 	@echo '\item[canonical.Rdata.gz]{\\texttt{'`md5 ../analysis/data/canonical.RData.gz | awk '{print $$4}'`"}}" >> .build/gitinfo.tex
-	@echo '\item[canonical-scored.Rdata.gz]{\\texttt{'`md5 ../analysis/data/canonical-scored.RData.gz | awk '{print $$4}'`"}}" >> .build/gitinfo.tex
 	@echo '\\end{description}' >> .build/gitinfo.tex
 	@echo "Wrote timestamp TeX in: .build/gitinfo.tex"
 
