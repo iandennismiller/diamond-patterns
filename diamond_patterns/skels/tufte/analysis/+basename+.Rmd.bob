@@ -39,13 +39,13 @@ source("fte_theme.R")
 # Methods
 
 ```{r importing}
-df = data.frame(timestamp=c(1, 2, 3), identity=c(2, 1, 2))
+df = data.frame(timestamp=c(1, 2, 3, 4, 5, 6), identity=c(2, 1, 2, 2, 1, 2), spent=c(1, 15, 2, 3, 20, 1))
 ```
 
 ## Date Range
 
 ```{r date-range, fig.height=3.5, fig.align="center", fig.cap="This plot breaks down the creation of memes over time by network."}
-ggplot(data=df, aes(x=identity) +
+ggplot(data=df, aes(x=identity)) +
     geom_histogram() +
     ggtitle("Number of observations") +
     ylab("# times observed") +
@@ -53,7 +53,6 @@ ggplot(data=df, aes(x=identity) +
     fte_theme() +
     theme(legend.position="top") +
     geom_hline(yintercept=0, size=0.2, color="black")
-    )
 ```
 
 ## Scoring
@@ -75,8 +74,8 @@ if (F) {
 ## Test for differences
 
 ```{r t-test, include=FALSE}
-t_result = t.test(x = df[which(df[["identity"]]==1),'identity'],
-       y = df[which(df[["identity"]]==2),'identity'])
+t_result = t.test(x = df[which(df[["identity"]]==1),'spent'],
+       y = df[which(df[["identity"]]==2),'spent'])
 ```
 
 $t(`r floor(unname(t_result$parameter))`) = `r unname(t_result$statistic)` (p<0.001)$
