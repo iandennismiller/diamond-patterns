@@ -23,6 +23,7 @@ Patterns
     patterns/presentation
     patterns/project
     patterns/python
+    patterns/tufte
     patterns/website
 
 About

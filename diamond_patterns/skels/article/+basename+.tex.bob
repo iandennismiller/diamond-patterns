@@ -14,13 +14,18 @@
 \twoauthors{ {{{ author.name }}} }{Other Author}
 \twoaffiliations{Some University}{Some University}
 
-\abstract{\input{sections/abstract}}
+\abstract{%
+This is a brief description.
+It can span multiple lines.
+}
 
 \begin{document}
 
 \maketitle
 
 \input{sections/introduction}
+
+\input{sections/background}
 
 \input{sections/methods}
 

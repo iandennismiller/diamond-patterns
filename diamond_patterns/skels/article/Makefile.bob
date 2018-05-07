@@ -33,17 +33,14 @@ timestamp:
 	@echo '\item[build time]{\\texttt{'`date`"}}" >> .build/gitinfo.tex
 	@echo '\item[git revision]{\\texttt{'`git rev-parse --verify HEAD`"}}" >> .build/gitinfo.tex
 	@echo '\item[canonical.Rdata.gz]{\\texttt{'`md5 ../analysis/data/canonical.RData.gz | awk '{print $$4}'`"}}" >> .build/gitinfo.tex
-	@echo '\item[canonical-scored.Rdata.gz]{\\texttt{'`md5 ../analysis/data/canonical-scored.RData.gz | awk '{print $$4}'`"}}" >> .build/gitinfo.tex
 	@echo '\\end{description}' >> .build/gitinfo.tex
 	@echo "Wrote timestamp TeX in: .build/gitinfo.tex"
 
 doc: html
-	pandoc -r html -R -w markdown .build/$(PROJECT).html | perl ~/bin/html-table2pandoc.pl > .build/tmp.md
+	pandoc -r html -w markdown .build/$(PROJECT).html | perl bin/html-table2pandoc.pl > .build/tmp.md
 	sed 's/^### /\'$$'\n### /g' .build/tmp.md > .build/tmp2.md
 	sed 's/^### /\'$$'\n### /g' .build/tmp2.md > .build/tmp3.md
-	#convert graphic/simple-slopes.pdf dogwhistles0x.png
 	pandoc -f markdown -t docx -o .build/$(PROJECT).docx .build/tmp3.md
-	#rm dogwhistles0x.png
 
 html:
 	htlatex $(PROJECT).tex "xhtml,word"
@@ -60,5 +57,10 @@ open:
 
 count:
 	detex $(PROJECT).tex |wc
+
+products:
+	mkdir -p products
+	cp .build/$(PROJECT).pdf products
+	-cp .build/$(PROJECT).docx products
 
 .PHONY: all clean manuscript doc spell html open count timestamp journal watch products
