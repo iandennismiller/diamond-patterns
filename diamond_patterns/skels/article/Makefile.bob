@@ -23,6 +23,10 @@ manuscript: timestamp
 	pdflatex -output-directory=.build $(PROJECT).tex
 	pdflatex -output-directory=.build $(PROJECT).tex
 
+bib:
+	@echo Ensure Zotero is running with Better BibTeX addon.
+	wget 'http://localhost:23119/better-bibtex/collection?/1/Bibliographies/{{{basename}}}.biblatex' -O {{{basename}}}.bib
+
 watch: timestamp
 	cd .build && latexmk ../$(PROJECT).tex
 
@@ -63,4 +67,4 @@ products:
 	cp .build/$(PROJECT).pdf products
 	-cp .build/$(PROJECT).docx products
 
-.PHONY: all clean manuscript doc spell html open count timestamp journal watch products
+.PHONY: all clean manuscript doc spell html open count timestamp journal watch products bib
