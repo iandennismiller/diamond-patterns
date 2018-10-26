@@ -1,5 +1,5 @@
 Outline: Structure for Scaffolding Towards a Publication
-=======
+========================================================
 
 http://diamond-patterns.readthedocs.io/en/latest/patterns/outline.html
 

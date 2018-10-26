@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 
-# from nose.plugins.attrib import attr
+from nose.plugins.attrib import attr
 from unittest import TestCase
 import os
 
 
 class BookTestCase(TestCase):
 
-    # @attr("single")
+    @attr("skip")
     def test_scaffold(self):
+
+        assert False
 
         # create temp directory
         directory = "../var/tests/book"

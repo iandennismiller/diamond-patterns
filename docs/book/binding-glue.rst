@@ -25,4 +25,4 @@ instructions
 - Remove the clamps.
 - Attach a pre-folded cover over the book, or use a ruler to make two creases in the cover the same distance apart as the thickness of the spine. This gives a neat fold around the spine area.
 - Apply glue to the spine again and press the cover in place. Reclamp the book using the wooden sticks and wait until the cover dries completely.
-Remove the clamps and sticks. Trim the cover with a razor blade or utility knife for a neat edge.
+- Remove the clamps and sticks. Trim the cover with a razor blade or utility knife for a neat edge.

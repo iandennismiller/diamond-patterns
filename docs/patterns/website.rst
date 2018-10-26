@@ -34,7 +34,7 @@ Create a project for the website
 
     project-new3 www-project
     pip install diamond-patterns
-    diamond --skel website scaffold
+    diamond --pattern website scaffold
     git add -A
     git commit -am "initial commit"
 

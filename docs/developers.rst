@@ -1,5 +1,5 @@
-Developing for Diamond Patterns
-===============================
+Development
+===========
 
 This document helps manage the development process.
 

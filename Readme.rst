@@ -7,31 +7,31 @@ Installation
 ------------
 
 Diamond-Patterns requires Python 3.
-`pip` is the recommended way to install Diamond-Patterns.
+``pip`` is the recommended way to install Diamond-Patterns.
 `Installation documentation is available online <http://diamond-patterns.readthedocs.io/en/latest/install.html>`_.
 
 ::
 
     pip install diamond-patterns
 
-
-
 Usage
 -----
 
-Create an `article` with Diamond-Patterns:
+View the help and list all available patterns:
 
 ::
 
-    mkdir my-article
-    cd my-article
-    diamond --skel article scaffold
-
-List available patterns:
-
-::
-
+    diamond --help
     diamond list
+
+
+"Scaffold" a LaTeX article using the ``article`` pattern:
+
+::
+
+    mkdir article
+    cd article
+    diamond --pattern article scaffold
 
 Online Resources
 ----------------

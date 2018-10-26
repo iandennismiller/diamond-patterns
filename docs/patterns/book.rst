@@ -11,4 +11,3 @@ Book: A LaTeX book with multiple chapters
     /book/print-createspace
     /book/print-home
     /book/print-shop
-    /book/rights

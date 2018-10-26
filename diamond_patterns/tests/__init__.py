@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-# produce a test for each skel
+# produce a test for each pattern
 
 # create temp directory
 
-# unpack the skel with some settings
+# unpack the pattern with some settings
 
 # run the makefile
 

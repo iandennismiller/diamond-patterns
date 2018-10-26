@@ -1,6 +1,5 @@
+*.egg-info
 /build
 /dist
-*.egg-info
 /var/sphinx
-/output
 /var/tests

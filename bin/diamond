@@ -10,41 +10,41 @@ from distutils import dir_util
 
 
 @click.group()
-@click.option('--skel', help='name of skel to apply.')
+@click.option('--pattern', help='name of pattern to apply.')
 @click.pass_context
-def cli(ctx, skel):
-    ctx.obj['skel'] = skel
+def cli(ctx, pattern):
+    ctx.obj['pattern'] = pattern
 
 
 def run_scaffold(ctx, testing=False):
-    if ctx.obj['skel'] in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
-        filename = pkg_resources.resource_filename('diamond_patterns', 'skels')
+    if ctx.obj['pattern'] in pkg_resources.resource_listdir('diamond_patterns', 'patterns'):
+        filename = pkg_resources.resource_filename('diamond_patterns', 'patterns')
         pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
 
-        # if skel exists, remove it
-        if os.path.isdir(".skel"):
-            dir_util.remove_tree(".skel")
+        # if pattern exists, remove it
+        if os.path.isdir(".pattern"):
+            dir_util.remove_tree(".pattern")
 
-        # create a local copy of the skel
-        full_path = os.path.join(pathname, filename, ctx.obj['skel'])
+        # create a local copy of the pattern
+        full_path = os.path.join(pathname, filename, ctx.obj['pattern'])
         print(full_path)
-        dir_util.copy_tree(full_path, ".skel")
+        dir_util.copy_tree(full_path, ".pattern")
 
-        # invoke mr.bob with the local copy of the skel
+        # invoke mr.bob with the local copy of the pattern
         if testing:
-            cmd = "mrbob -w -n -O . .skel"
+            cmd = "mrbob -w -n -O . .pattern"
         else:
-            cmd = "mrbob -w -O . .skel"
+            cmd = "mrbob -w -O . .pattern"
         os.system(cmd)
 
         # clean up after ourselves
-        if os.path.isdir(".skel"):
-            dir_util.remove_tree(".skel")
+        if os.path.isdir(".pattern"):
+            dir_util.remove_tree(".pattern")
     else:
-        print("unrecognized skel: {0}".format(ctx.obj['skel']))
+        print("unrecognized pattern: {0}".format(ctx.obj['pattern']))
 
 
-@cli.command('scaffold', short_help='scaffold a folder with a skel.')
+@cli.command('scaffold', short_help='scaffold a folder with a pattern.')
 @click.pass_context
 def scaffold(ctx):
     from diamond_patterns.__meta__ import __version__
@@ -60,14 +60,14 @@ def non_interactive(ctx):
     run_scaffold(ctx, testing=True)
 
 
-@cli.command('list', short_help='list available skels.')
-def list_skels():
+@cli.command('list', short_help='list available patterns.')
+def list_patterns():
     from diamond_patterns.__meta__ import __version__
     print("Diamond-Patterns", __version__)
 
-    print("Available skels:\n")
-    for skel in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
-        print("- {0}".format(skel))
+    print("Available patterns:\n")
+    for pattern in pkg_resources.resource_listdir('diamond_patterns', 'patterns'):
+        print("- {0}".format(pattern))
     print("")
 
 

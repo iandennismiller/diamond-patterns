@@ -129,15 +129,26 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ---------------------------------------------------
 
-sys.path.append(os.path.abspath('_themes'))
-html_theme_path = ['_themes']
-html_theme = 'flask'
+import alabaster
 
 # # The theme to use for HTML and HTML Help pages.  See the documentation for
 # # a list of builtin themes.
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
+
+html_theme_path = [alabaster.get_path()]
+html_theme = 'alabaster'
+
+html_theme_options = {
+    'github_button': False,
+    'show_powered_by': False,
+    # 'analytics_id': "",
+    # 'logo': '',
+    # 'extra_nav_links': {
+    #     "pplapi Home": "http://pplapi.com",
+    # }
+}
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -148,7 +159,7 @@ html_theme = 'flask'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = "_static/tavernier_blue-300.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -171,19 +182,13 @@ html_static_path = ['_static']
 # Custom sidebar templates, maps document names to template names.
 
 html_sidebars = {
-    'index': [
-        'sidebarlogo.html',
-        'sidebarintro.html',
-        'localtoc.html',
-        'searchbox.html',
-        'version.html'
-    ],
     '**': [
-        'sidebarlogo.html',
-        'localtoc.html',
+        # 'about.html',
+        "sidebarintro.html",
+        'navigation.html',
         # 'relations.html',
-        'searchbox.html',
-        'version.html'
+        # 'searchbox.html',
+        # 'donate.html',
     ]
 }
 

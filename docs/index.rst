@@ -1,33 +1,13 @@
 .. include:: ../Readme.rst
 
-Introduction
-------------
+Usage
+-----
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     install
-
-Patterns
---------
-
-.. toctree::
-    :maxdepth: 1
-
-    patterns/agile
-    patterns/analysis
-    patterns/ansible
-    patterns/article
-    patterns/beamer
-    patterns/book
-    patterns/charts
-    patterns/organization
-    patterns/outline
-    patterns/presentation
-    patterns/project
-    patterns/python
-    patterns/tufte
-    patterns/website
+    patterns
 
 About
 -----

@@ -11,6 +11,8 @@ getting started
 
 The steps required to complete the project are delineated in the Checklist.  Open up that file and take it from there.
 
+::
+
     open assets/agile/*Checklist.oo3
 
 using this documentation
