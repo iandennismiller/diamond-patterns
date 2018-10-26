@@ -1,9 +1,8 @@
 # bookdown tufte
 
 all: clean html pdf
-	cp _assets/index.html docs
-	cp article.html docs
-	cp article.pdf docs
+	mv index.html docs
+	mv article.pdf docs
 	@echo "Done"
 
 html:
@@ -14,12 +13,13 @@ pdf:
 
 clean:
 	rm -rf docs && mkdir docs
+	rm -f index.html
+	rm -rf _bookdown_files/
 	# rm -f analysis/index.Rmd
 	# rm -f analysis/*.md
 	# rm -f analysis/*.pdf
 	# rm -f analysis/*.html
 	# rm -rf analysis/*_files/
-	# rm -rf analysis/_bookdown_files/
 	# rm -rf analysis/_book/
 	@echo "Clean"
 
