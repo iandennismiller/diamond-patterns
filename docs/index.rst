@@ -18,8 +18,11 @@ Patterns
     patterns/analysis
     patterns/ansible
     patterns/article
+    patterns/beamer
     patterns/book
+    patterns/charts
     patterns/organization
+    patterns/outline
     patterns/presentation
     patterns/project
     patterns/python
