@@ -18,6 +18,7 @@ Patterns
     patterns/analysis
     patterns/ansible
     patterns/article
+    patterns/beamer
     patterns/book
     patterns/organization
     patterns/outline
