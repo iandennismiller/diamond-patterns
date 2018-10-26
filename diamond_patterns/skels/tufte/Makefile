@@ -2,7 +2,7 @@
 
 all: clean html pdf
 	mv index.html docs
-	mv article.pdf docs
+	mv index.pdf docs
 	@echo "Done"
 
 html:
@@ -15,12 +15,6 @@ clean:
 	rm -rf docs && mkdir docs
 	rm -f index.html
 	rm -rf _bookdown_files/
-	# rm -f analysis/index.Rmd
-	# rm -f analysis/*.md
-	# rm -f analysis/*.pdf
-	# rm -f analysis/*.html
-	# rm -rf analysis/*_files/
-	# rm -rf analysis/_book/
 	@echo "Clean"
 
 depends:
