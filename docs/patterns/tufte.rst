@@ -4,14 +4,16 @@ Tufte Bookdown Online Article
 About
 -----
 
-Create online articles based on R, Bookdown, and the Tufte aesthetic.
+Create online articles with Tufte aesthetic using R Markdown and Bookdown.
 
 http://diamond-patterns.readthedocs.io/en/latest/patterns/tufte.html
 
-Installation
-------------
+Usage
+-----
 
-`make depends` will install the necessary R libraries.
+- `make depends` will install the necessary R libraries.
+- `make html` produces an HTML website.
+- `make all` will produce the HTML website and copy the results to `/docs`.
 
 GitHub Pages
 ------------
