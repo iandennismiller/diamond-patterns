@@ -35,7 +35,6 @@ setup(
         "Operating System :: POSIX :: BSD",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows :: Windows 10",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.6",
         "Topic :: Office/Business",
     ],

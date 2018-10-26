@@ -1,8 +1,8 @@
 # Diamond-Patterns Makefile
 
 SHELL=/bin/bash
-MOD_NAME=project_system
-TEST_CMD=nosetests -w $(MOD_NAME) -c etc/tests.cfg --with-coverage --cover-package=$(MOD_NAME)
+MOD_NAME=diamond_patterns
+TEST_CMD=nosetests -w $(MOD_NAME) -c etc/tests.cfg
 
 install:
 	python setup.py install
@@ -11,9 +11,7 @@ dev:
 	pip install -r .requirements-dev.txt
 
 clean:
-	rm -rf build dist *.egg-info *.pyc
-	rm -rf output
-	mkdir output
+	rm -rf build dist *.egg-info *.pyc var/tests
 
 docs:
 	rm -rf build/sphinx
@@ -22,11 +20,8 @@ docs:
 watch:
 	watchmedo shell-command -R -p "*.py" -c 'date; $(TEST_CMD); date' .
 
-test:
+test: clean install
 	$(TEST_CMD)
-
-tox:
-	tox
 
 release:
 	# first: python setup.py register -r https://pypi.python.org/pypi
@@ -37,4 +32,4 @@ homebrew:
 	bin/poet-homebrew.sh
 	cp /tmp/project_system.rb etc/project_system.rb
 
-.PHONY: clean install test watch docs release tox dev homebrew
+.PHONY: clean install test watch docs release dev homebrew

@@ -16,12 +16,7 @@ def cli(ctx, skel):
     ctx.obj['skel'] = skel
 
 
-@cli.command('scaffold', short_help='scaffold a folder with a skel.')
-@click.pass_context
-def scaffold(ctx):
-    from diamond_patterns.__meta__ import __version__
-    print("Diamond-Patterns", __version__)
-
+def run_scaffold(ctx, testing=False):
     if ctx.obj['skel'] in pkg_resources.resource_listdir('diamond_patterns', 'skels'):
         filename = pkg_resources.resource_filename('diamond_patterns', 'skels')
         pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
@@ -36,7 +31,10 @@ def scaffold(ctx):
         dir_util.copy_tree(full_path, ".skel")
 
         # invoke mr.bob with the local copy of the skel
-        cmd = "mrbob -w -O . .skel"
+        if testing:
+            cmd = "mrbob -w -n -O . .skel"
+        else:
+            cmd = "mrbob -w -O . .skel"
         os.system(cmd)
 
         # clean up after ourselves
@@ -44,6 +42,22 @@ def scaffold(ctx):
             dir_util.remove_tree(".skel")
     else:
         print("unrecognized skel: {0}".format(ctx.obj['skel']))
+
+
+@cli.command('scaffold', short_help='scaffold a folder with a skel.')
+@click.pass_context
+def scaffold(ctx):
+    from diamond_patterns.__meta__ import __version__
+    print("Diamond-Patterns", __version__)
+    run_scaffold(ctx)
+
+
+@cli.command('noprompt', short_help='non-interactive scaffold.')
+@click.pass_context
+def non_interactive(ctx):
+    from diamond_patterns.__meta__ import __version__
+    print("Diamond-Patterns", __version__)
+    run_scaffold(ctx, testing=True)
 
 
 @cli.command('list', short_help='list available skels.')
