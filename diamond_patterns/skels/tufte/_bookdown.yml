@@ -1,7 +1,7 @@
 ---
 site: "bookdown::bookdown_site"
 rmd_files: "article.Rmd"
-book_filename: "article"
+book_filename: "index"
 bookdown::gitbook:
   config:
     toc:
