@@ -1,10 +1,1 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-/analysis/*.html
-/analysis/*.md
-/analysis/*.pdf
-/analysis/*_files/
-/analysis/*_cache/
-/analysis/_book/
+/_bookdown_files/

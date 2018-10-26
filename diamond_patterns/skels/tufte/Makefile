@@ -1,12 +1,12 @@
 # bookdown tufte
 
 all: clean html pdf
-	mv index.html docs
-	mv index.pdf docs
 	@echo "Done"
 
 html:
 	Rscript -e "library(bookdown); bookdown::render_book('article.Rmd', 'bookdown::tufte_html2')"
+	mkdir -p docs
+	mv index.html docs
 
 pdf:
 	Rscript -e "library(bookdown); bookdown::render_book('article.Rmd', 'bookdown::pdf_book')"
