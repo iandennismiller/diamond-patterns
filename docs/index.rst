@@ -20,6 +20,7 @@ Patterns
     patterns/article
     patterns/beamer
     patterns/book
+    patterns/charts
     patterns/organization
     patterns/outline
     patterns/presentation
