@@ -1,22 +1,22 @@
-Outline
+Outline: Structure for Scaffolding Towards a Publication
 =======
 
 http://diamond-patterns.readthedocs.io/en/latest/patterns/outline.html
 
 1. construct outline with headings
-1. expand outline into slideshow by adding lists of points
-1. add visuals to slide show
-1. present slides with ad-libbed narration and record audio
-1. transcribe audio onto copy of outline, aligning headings to slides
-1. revise transcript
-1. revise slides; make simultaneous updates to transcript
-1. present slides again while reading transcript and recording audio
-1. edit the audio to remove filler words and pauses
-1. combine audio with slides into video for online distribution
-1. expand transcript to become article
-1. revise article
-1. revise slides
-1. record a "final" video (optional)
+2. expand outline into slideshow by adding lists of points
+3. add visuals to slide show
+4. present slides with ad-libbed narration and record audio
+5. transcribe audio onto copy of outline, aligning headings to slides
+6. revise transcript
+7. revise slides; make simultaneous updates to transcript
+8. present slides again while reading transcript and recording audio
+9. edit the audio to remove filler words and pauses
+10. combine audio with slides into video for online distribution
+11. expand transcript to become article
+12. revise article
+13. revise slides
+14. record a "final" video (optional)
 
 Setup
 -----
