@@ -21,62 +21,23 @@ http://diamond-patterns.readthedocs.io/en/latest/patterns/outline.html
 Setup
 -----
 
-Create Beamer presentation with Markdown
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create article, presentation, and working folders.
 
 ::
 
-    mkdir presentation
-    cd presentation
-    diamond --skel beamer scaffold
-    cd ..
-
-Create LaTeX article
-^^^^^^^^^^^^^^^^^^^^
-
-::
-
-    mkdir article
-    cd article
-    diamond --skel article scaffold
-    cd ..
-
-Or, create Tufte-style bookdown website
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-::
-
-    mkdir working
-    cd working
-    diamond --skel tufte scaffold
-    cd ..
+    make scaffold
 
 Estimation
 ----------
 
-Once the outline is made, analysis has been completed, and visuals are created, then a rough time estimate for the rest of the project can be calculated.
-
-Let's say there are 90 slides implied by the outline.
-
-::
-
-    slides = 90
-    image = 5 * slides
-    present = slides
-    transcribe = 6 * slides
-    revise = 10 * slides
-    draft = 10 * slides
-    minutes = 32 * slides
-    hours = slides / 2
-
-Actually, the easy way is this.  Each slide implies 30 minutes of work, so the number of hours is slides/2.
+Once the outline is made, analysis has been completed, and visuals are created, then a rough time estimate for the rest of the project can be calculated.  Each slide implies 32 minutes of work, so the number of hours to estimate is **num slides** / 2.
 
 Unknowns
 ^^^^^^^^
 
 - outlining: how well is the subject matter known?
-- visualizing: how complex are the goals for the visual?
 - analysis: how much work does this entail?
+- visualizing: how complex are the goals for the visual?
 
 Known quantities
 ^^^^^^^^^^^^^^^^
