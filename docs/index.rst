@@ -20,6 +20,7 @@ Patterns
     patterns/article
     patterns/book
     patterns/organization
+    patterns/outline
     patterns/presentation
     patterns/project
     patterns/python
