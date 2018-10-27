@@ -1,2 +1,2 @@
 graft diamond_patterns
-include *.cfg *.rst *.in *.txt
+include *.cfg *.rst *.in *.txt *.md
