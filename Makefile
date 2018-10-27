@@ -14,11 +14,7 @@ clean:
 	rm -rf build dist *.egg-info *.pyc var/tests
 
 docs:
-	rm -rf build/sphinx
 	sphinx-build -b html docs build/sphinx
-
-watch:
-	watchmedo shell-command -R -p "*.py" -c 'date; $(TEST_CMD); date' .
 
 test: clean install
 	$(TEST_CMD)
@@ -30,6 +26,6 @@ release:
 # create a homebrew install script
 homebrew:
 	bin/poet-homebrew.sh
-	cp /tmp/project_system.rb etc/project_system.rb
+	cp /tmp/project_system.rb etc/project-system.rb
 
-.PHONY: clean install test watch docs release dev homebrew
+.PHONY: clean install test docs release dev homebrew
