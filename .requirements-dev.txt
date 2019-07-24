@@ -6,3 +6,5 @@ GitPython==1.0.1
 watchdog==0.8.3
 nose
 alabaster
+tox
+nose

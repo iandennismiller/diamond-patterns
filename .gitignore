@@ -3,3 +3,6 @@
 /dist
 /var/sphinx
 /var/tests
+/.tox
+*.pyc
+/.coverage

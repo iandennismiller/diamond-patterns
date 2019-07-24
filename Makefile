@@ -2,10 +2,13 @@
 
 SHELL=/bin/bash
 MOD_NAME=diamond_patterns
-TEST_CMD=nosetests -w $(MOD_NAME) -c etc/tests.cfg
+TEST_CMD=tox -c .tox.ini
 
 install:
 	python setup.py install
+
+requirements:
+	pip install -r requirements.txt
 
 dev:
 	pip install -r .requirements-dev.txt
@@ -16,16 +19,11 @@ clean:
 docs:
 	sphinx-build -b html docs build/sphinx
 
-test: clean install
+test:
 	$(TEST_CMD)
 
 release:
 	# first: python setup.py register -r https://pypi.python.org/pypi
 	python setup.py sdist upload
 
-# create a homebrew install script
-homebrew:
-	bin/poet-homebrew.sh
-	cp /tmp/project_system.rb etc/project-system.rb
-
-.PHONY: clean install test docs release dev homebrew
+.PHONY: clean install test docs release dev
