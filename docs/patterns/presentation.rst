@@ -1,5 +1,7 @@
-Presentation: An HTML5 presentation
-===================================
+Presentation
+============
+
+An HTML5 presentation.
 
 - Build this presentation with `make`.
 - This presentation builds into `/docs`.

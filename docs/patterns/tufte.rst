@@ -1,5 +1,7 @@
-Tufte Bookdown Online Article
-=============================
+Tufte
+=====
+
+A Tufte Bookdown Online Article.
 
 About
 -----

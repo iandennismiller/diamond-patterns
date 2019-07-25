@@ -1,5 +1,7 @@
-Agile: An Agile project management scaffold
-===========================================
+Agile 
+=====
+
+An Agile project management scaffold.
 
 overview
 --------

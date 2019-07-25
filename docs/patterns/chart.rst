@@ -1,7 +1,10 @@
-Charts
-======
+Chart
+=====
 
 Render flowcharts with Mermaid.
+
+Setup
+-----
 
 ::
 

@@ -1,5 +1,10 @@
-Beamer: Produce LaTeX Beamer Presentations from Pandoc-flavored Markdown
-========================================================================
+Beamer
+======
+
+Produce LaTeX Beamer Presentations from Pandoc-flavored Markdown.
+
+Setup
+-----
 
 ::
 

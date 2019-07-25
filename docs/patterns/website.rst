@@ -1,7 +1,7 @@
 Website
 =======
 
-A website based on Jekyll
+A website based on Jekyll.
 
 Setup
 -----

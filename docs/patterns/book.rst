@@ -1,5 +1,17 @@
-Book: A LaTeX book with multiple chapters
-=========================================
+Book
+====
+
+A LaTeX book with multiple chapters.
+
+Setup
+-----
+
+::
+
+    diamond scaffold book
+
+Book Making Guide
+-----------------
 
 .. toctree::
     :maxdepth: 1

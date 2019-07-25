@@ -1,5 +1,7 @@
-Ansible: A linux system configuration container
-===============================================
+Ansible
+=======
+
+A linux system configuration container.
 
 This pattern provides for the management of a cloud of Linux machines.
 It is simple enough to manage a single machine, but ansible is capable of easily scaling up to support lots of similar machines.

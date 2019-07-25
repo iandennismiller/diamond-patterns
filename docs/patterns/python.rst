@@ -1,2 +1,12 @@
-Python: A Python package
-========================
+Python
+======
+
+A Python package.
+
+Setup
+-----
+
+::
+
+    diamond scaffold python
+

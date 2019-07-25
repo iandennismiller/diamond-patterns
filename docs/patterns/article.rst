@@ -1,5 +1,10 @@
-Article: A LaTeX article with sections and graphics
-===================================================
+Article
+=======
+
+A LaTeX article with sections and graphics.
+
+Setup
+-----
 
 Scaffold the article pattern in the current directory:
 

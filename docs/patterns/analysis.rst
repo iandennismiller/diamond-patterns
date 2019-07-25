@@ -1,5 +1,7 @@
-Analysis: An R project suitable for data analysis
-=================================================
+Analysis
+========
+
+An R project suitable for data analysis.
 
 These are the files in R/*
 

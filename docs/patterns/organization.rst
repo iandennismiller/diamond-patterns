@@ -1,5 +1,14 @@
-Organzation: An organization with digital constitution
-======================================================
+Organzation
+===========
+
+An organization with digital constitution.
+
+Setup
+-----
+
+::
+
+    diamond scaffold organization
 
 The diamond-patterns Organization skel is used to scaffold a democratic organization governed by an online constitutional website.  The following secretarial functions are provided in the Makefile:
 
