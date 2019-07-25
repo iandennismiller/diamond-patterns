@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# diamond-patterns (cc) 2016 Ian Dennis Miller
+# diamond-patterns (cc) 2019 Ian Dennis Miller
 
 import click
 import pkg_resources
 import os
-import diamond_patterns
-from distutils import dir_util
+import sys
+import requests
+sys.path.insert(0, '.')
+from diamond_patterns import Pattern
 
 
 @click.group()
@@ -16,40 +18,13 @@ def cli(ctx, pattern):
     ctx.obj['pattern'] = pattern
 
 
-def run_scaffold(ctx, testing=False):
-    if ctx.obj['pattern'] in pkg_resources.resource_listdir('diamond_patterns', 'patterns'):
-        filename = pkg_resources.resource_filename('diamond_patterns', 'patterns')
-        pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
-
-        # if pattern exists, remove it
-        if os.path.isdir(".pattern"):
-            dir_util.remove_tree(".pattern")
-
-        # create a local copy of the pattern
-        full_path = os.path.join(pathname, filename, ctx.obj['pattern'])
-        print(full_path)
-        dir_util.copy_tree(full_path, ".pattern")
-
-        # invoke mr.bob with the local copy of the pattern
-        if testing:
-            cmd = "mrbob -w -n -O . .pattern"
-        else:
-            cmd = "mrbob -w -O . .pattern"
-        os.system(cmd)
-
-        # clean up after ourselves
-        if os.path.isdir(".pattern"):
-            dir_util.remove_tree(".pattern")
-    else:
-        print("unrecognized pattern: {0}".format(ctx.obj['pattern']))
-
-
 @cli.command('scaffold', short_help='scaffold a folder with a pattern.')
 @click.pass_context
 def scaffold(ctx):
     from diamond_patterns.__meta__ import __version__
     print("Diamond-Patterns", __version__)
-    run_scaffold(ctx)
+    pattern = ctx.obj['pattern']
+    diamond_patterns.run_scaffold(pattern)
 
 
 @cli.command('noprompt', short_help='non-interactive scaffold.')
@@ -57,7 +32,8 @@ def scaffold(ctx):
 def non_interactive(ctx):
     from diamond_patterns.__meta__ import __version__
     print("Diamond-Patterns", __version__)
-    run_scaffold(ctx, testing=True)
+    pattern = ctx.obj['pattern']
+    diamond_patterns.run_scaffold(pattern, testing=True)
 
 
 @cli.command('list', short_help='list available patterns.')
@@ -75,6 +51,14 @@ def list_patterns():
 def version():
     from diamond_patterns.__meta__ import __version__
     print(__version__)
+
+
+@cli.command('update', short_help='update patterns')
+def update():
+    from diamond_patterns.__meta__ import __version__
+    print("Diamond-Patterns", __version__)
+    p = Pattern()
+    p.download_manifest()
 
 
 if __name__ == '__main__':

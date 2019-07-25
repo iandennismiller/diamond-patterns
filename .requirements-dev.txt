@@ -10,3 +10,4 @@ tox
 nose
 arrow
 pylint
+requests

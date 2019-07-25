@@ -6,17 +6,10 @@
 # make manifest
 # This will produce a new manifest file in diamond_patterns/patterns
 
-import os
-import json
-import glob
-import arrow
+import sys
+sys.path.insert(0, '.')
+from diamond_patterns import Pattern
 
-h = {
-    'timestamp': arrow.utcnow().timestamp,
-    'patterns': [f.split('/')[2] for f in glob.glob("diamond_patterns/patterns/*/")],
-}
-
-with open('diamond_patterns/patterns/manifest.json', 'w') as f:
-    f.write(json.dumps(h, indent=2, sort_keys=True))
-
+p = Pattern()
+p.write_manifest()
 print("ok")
