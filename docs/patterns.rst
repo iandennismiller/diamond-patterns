@@ -13,7 +13,7 @@ Part of the value added by collecting these patterns is in the documentation tha
     /patterns/article
     /patterns/beamer
     /patterns/book
-    /patterns/charts
+    /patterns/chart
     /patterns/organization
     /patterns/outline
     /patterns/presentation
