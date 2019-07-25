@@ -2,7 +2,6 @@
 
 SHELL=/bin/bash
 MOD_NAME=diamond_patterns
-TEST_CMD=tox -c .tox.ini
 
 install:
 	python setup.py install
@@ -20,10 +19,14 @@ docs:
 	sphinx-build -b html docs build/sphinx
 
 test:
-	$(TEST_CMD)
+	tox -c .tox.ini
+
+# update the manifest file with patterns
+manifest:
+	bin/manifest.py
 
 release:
-	# first: python setup.py register -r https://pypi.python.org/pypi
-	python setup.py sdist upload
+	python setup.py sdist bdist_wheel
+	twine upload dist/*
 
 .PHONY: clean install test docs release dev

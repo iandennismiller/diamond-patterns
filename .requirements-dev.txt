@@ -8,3 +8,5 @@ nose
 alabaster
 tox
 nose
+arrow
+pylint
