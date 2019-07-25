@@ -10,38 +10,30 @@ import requests
 
 class Pattern:
     def __init__(self):
-        self.manifest_file = os.path.join(os.path.expanduser("~"), ".diamond-patterns-manifest.json")
-        self.manifest_url = 'https://raw.githubusercontent.com/iandennismiller/diamond-patterns/develop/patterns/manifest.json'
+        self.manifest_file = os.path.join(
+            os.path.expanduser("~"), 
+            ".diamond-patterns-manifest.json"
+        )
+
         with open(self.manifest_file, 'r') as f:
             self.manifest = json.load(f)
+        self.patterns = self.manifest['patterns']
 
-    def run_scaffold(pattern, testing=False):
-        if ctx.obj['pattern'] in pkg_resources.resource_listdir('diamond_patterns', 'patterns'):
-            filename = pkg_resources.resource_filename('diamond_patterns', 'patterns')
-            pathname = os.path.dirname(os.path.abspath(diamond_patterns.__file__))
+        self.manifest_url = 'https://raw.githubusercontent.com/iandennismiller/diamond-patterns/develop/patterns/manifest.json'
+        self.archive_url = 'https://github.com/iandennismiller/diamond-patterns/archive/develop.zip#diamond-patterns-develop/patterns'
 
-            # if pattern exists, remove it
-            if os.path.isdir(".pattern"):
-                dir_util.remove_tree(".pattern")
+    def run_scaffold(self, pattern, interactive=True):
+        if pattern not in self.patterns:
+            print("unrecognized pattern: {0}".format(pattern))
+            return
 
-            # create a local copy of the pattern
-            full_path = os.path.join(pathname, filename, ctx.obj['pattern'])
-            print(full_path)
-            dir_util.copy_tree(full_path, ".pattern")
+        pattern_url = "{}/{}".format(self.archive_url, pattern)
 
-            # invoke mr.bob with the local copy of the pattern
-            if testing:
-                cmd = "mrbob -w -n -O . .pattern"
-            else:
-                cmd = "mrbob -w -O . .pattern"
-            os.system(cmd)
-
-            # clean up after ourselves
-            if os.path.isdir(".pattern"):
-                dir_util.remove_tree(".pattern")
+        if interactive:
+            cmd = "mrbob -w -O . {}".format(pattern_url)
         else:
-            print("unrecognized pattern: {0}".format(ctx.obj['pattern']))
-
+            cmd = "mrbob -w -n -O . {}".format(pattern_url)
+        os.system(cmd)
 
     def download_manifest(self):
         r = requests.get(self.manifest_url)
@@ -50,7 +42,6 @@ class Pattern:
                 f.write(r.text)
         else:
             print("ERROR: failed to download {}".format(self.manifest_url))
-
 
     def ensure_manifest(self):
         if not os.path.isfile(self.manifest_file):

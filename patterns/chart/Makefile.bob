@@ -1,10 +1,11 @@
 CHARTS = \
-	file1.png
+	{{{filename}}}.png
 
 MERMAID = ~/node_modules/.bin/mmdc
 
 all: $(CHARTS)
-	cp *.png ../presentation/images/charts
+	mkdir -p products
+	cp *.png products
 	@echo done
 
 %.png: %.mmd
