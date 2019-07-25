@@ -16,7 +16,7 @@ class BookTestCase(TestCase):
             os.makedirs(directory)
 
         # unpack the pattern with some settings
-        os.system("cd ../var/tests/book && ../../../bin/diamond --pattern book noprompt")
+        os.system("cd ../var/tests/book && ../../../bin/diamond scaffold --no-interactive book")
 
         # assert
         assert os.stat("../var/tests/book/Makefile")

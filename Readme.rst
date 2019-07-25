@@ -28,7 +28,7 @@ Installation
 
     pip install diamond-patterns
 
-`Installation documentation <http://diamond-patterns.readthedocs.io/en/latest/install.html>`_ is available online.
+`Installation documentation <https://diamond-patterns.readthedocs.io/en/latest/install.html>`_ is available online.
 Diamond-Patterns requires Python 3.
 
 Usage
@@ -40,14 +40,20 @@ Usage
 
     mkdir article
     cd article
-    diamond --pattern article scaffold
+    diamond scaffold article
 
-View help and list all available patterns:
+List all available patterns:
 
 ::
 
-    diamond --help
     diamond list
+
+
+View documentation for ``article`` pattern:
+
+::
+
+    diamond docs article
 
 
 Online Resources
