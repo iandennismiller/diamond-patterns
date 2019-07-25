@@ -1,29 +1,10 @@
-Website: A website based on Jekyll
-==================================
+Website
+=======
 
-To run the local server:
-
-::
-
-    make serve
-
-The test website is available at [http://127.0.0.1:4000](http://127.0.0.1:4000).
+A website based on Jekyll
 
 Setup
 -----
-
-1. Configure web host
-2. Create project for website
-3. Configure git
-
-Configure web host
-^^^^^^^^^^^^^^^^^^
-
-Create an Ansible role for the web host to contain this website.
-
-    project-workon vhost
-    make www
-    vi playbook.yaml
 
 Create project for website
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -32,9 +13,8 @@ Create a project for the website
 
 ::
 
-    project-new3 www-project
     pip install diamond-patterns
-    diamond --pattern website scaffold
+    diamond scaffold website
     git add -A
     git commit -am "initial commit"
 
@@ -69,3 +49,12 @@ Now push the changes to rebuild the website.
     git push --set-upstream origin master
     git push -u origin --all
     git push -u origin --tags
+
+Local server
+------------
+
+::
+
+    make serve
+
+The test website is available at [http://127.0.0.1:4000](http://127.0.0.1:4000).
