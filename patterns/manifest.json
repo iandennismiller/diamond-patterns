@@ -1,4 +1,6 @@
 {
+  "archive_url": "https://github.com/iandennismiller/diamond-patterns/archive/master.zip#diamond-patterns-master/patterns",
+  "manifest_url": "https://raw.githubusercontent.com/iandennismiller/diamond-patterns/master/patterns/manifest.json",
   "patterns": [
     "agile",
     "analysis",
@@ -15,6 +17,5 @@
     "website",
     "chart"
   ],
-  "timestamp": 1564066968,
-  "url": "https://raw.githubusercontent.com/iandennismiller/diamond-patterns/develop/patterns/manifest.json"
+  "timestamp": 1564068977
 }

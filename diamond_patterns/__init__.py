@@ -19,8 +19,15 @@ class Pattern:
             self.manifest = json.load(f)
         self.patterns = self.manifest['patterns']
 
-        self.manifest_url = 'https://raw.githubusercontent.com/iandennismiller/diamond-patterns/develop/patterns/manifest.json'
-        self.archive_url = 'https://github.com/iandennismiller/diamond-patterns/archive/develop.zip#diamond-patterns-develop/patterns'
+        if 'manifest_url' in self.manifest and self.manifest['manifest_url']:
+            self.manifest_url = self.manifest['manifest_url']
+        else:
+            self.manifest_url = 'https://raw.githubusercontent.com/iandennismiller/diamond-patterns/master/patterns/manifest.json'
+
+        if 'archive_url' in self.manifest and self.manifest['archive_url']:
+            self.archive_url = self.manifest['archive_url']
+        else:
+            self.archive_url = 'https://github.com/iandennismiller/diamond-patterns/archive/master.zip#diamond-patterns-master/patterns'
 
     def run_scaffold(self, pattern, interactive=True):
         if pattern not in self.patterns:
@@ -52,7 +59,8 @@ class Pattern:
         h = {
             'timestamp': arrow.utcnow().timestamp,
             'patterns': [f.split('/')[1] for f in glob.glob("patterns/*/")],
-            'url': self.manifest_url,
+            'manifest_url': self.manifest_url,
+            'archive_url': self.archive_url,
         }
 
         with open('patterns/manifest.json', 'w') as f:

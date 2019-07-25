@@ -4,7 +4,7 @@
 
 # Run this in the root of the project:
 # make manifest
-# This will produce a new manifest file in diamond_patterns/patterns
+# This will produce a new manifest file in ./patterns/manifest.json
 
 import sys
 sys.path.insert(0, '.')
