@@ -11,7 +11,8 @@ NOSPELL= \
 	--add-tex-command="bibliography op" \
 	--add-tex-command="thispagestyle op"
 	--add-tex-command="citep op" \
-	--add-tex-command="citet op"
+	--add-tex-command="citet op" \
+	--add-tex-command="setkomavar op"
 
 all: $(PDF_FILES)
 	@echo done
