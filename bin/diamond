@@ -45,7 +45,7 @@ def version():
 @click.command('update', short_help='update patterns')
 def update():
     p = Pattern()
-    print("Updating {}".format(p.manifest_file))
+    print("Updating {}".format(p.config["manifest_file"]))
     p.download_manifest()
 
 
