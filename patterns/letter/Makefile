@@ -12,7 +12,8 @@ NOSPELL= \
 	--add-tex-command="thispagestyle op"
 	--add-tex-command="citep op" \
 	--add-tex-command="citet op" \
-	--add-tex-command="setkomavar op"
+	--add-tex-command="setkomavar op" \
+	--add-tex-command="defaultfontfeatures op"
 
 all: $(PDF_FILES)
 	@echo done
