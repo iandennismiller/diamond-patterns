@@ -35,8 +35,8 @@
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont {Adobe Garamond Pro} % Main document font
-\setsansfont {Gill Sans} % Used in the from address line above the to address
+% \setmainfont {Adobe Garamond Pro} % Main document font
+% \setsansfont {Gill Sans} % Used in the from address line above the to address
 
 \renewcommand{\normalsize}{\fontsize{12.5}{17}\selectfont} % Sets the font size and leading
 
