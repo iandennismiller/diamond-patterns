@@ -18,7 +18,7 @@ all: $(PDF_FILES)
 
 %.pdf: %.tex
 	@echo compiling $<...
-	latexmk -xetex "$(basename $<).tex"
+	latexmk -xelatex "$(basename $<).tex"
 
 %.spchk: %.tex
 	@aspell \
