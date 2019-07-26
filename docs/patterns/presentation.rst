@@ -1,7 +1,16 @@
 Presentation
 ============
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/presentation>`_
+
 An HTML5 presentation.
+
+Pattern
+-------
+
+::
+
+    diamond pattern presentation
 
 - Build this presentation with `make`.
 - This presentation builds into `/docs`.

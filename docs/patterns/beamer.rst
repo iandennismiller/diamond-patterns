@@ -1,11 +1,14 @@
 Beamer
 ======
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/beamer>`_
+
 Produce LaTeX Beamer Presentations from Pandoc-flavored Markdown.
 
-Setup
------
+Pattern
+-------
 
 ::
 
+    diamond pattern agile
     make

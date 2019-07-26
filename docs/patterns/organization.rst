@@ -1,6 +1,8 @@
 Organzation
 ===========
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/organization>`_
+
 An organization with digital constitution.
 
 Setup
@@ -8,7 +10,7 @@ Setup
 
 ::
 
-    diamond scaffold organization
+    diamond pattern organization
 
 The diamond-patterns Organization skel is used to scaffold a democratic organization governed by an online constitutional website.  The following secretarial functions are provided in the Makefile:
 

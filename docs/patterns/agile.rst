@@ -1,7 +1,16 @@
 Agile 
 =====
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/agile>`_
+
 An Agile project management scaffold.
+
+Pattern
+-------
+
+::
+
+    diamond pattern agile
 
 overview
 --------

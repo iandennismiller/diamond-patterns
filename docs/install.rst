@@ -27,12 +27,3 @@ What those commands do:
 1. Launch Power Shell with Administrator privileges.
 2. Manually install ``mr.bob``.
 3. Install ``diamond-patterns`` with ``pip``.
-
-.. OS X
-.. ----
-
-.. Install system-wide with Homebrew.
-
-.. ::
-
-..     brew install https://raw.github.com/iandennismiller/diamond-patterns/master/etc/diamond-patterns.rb

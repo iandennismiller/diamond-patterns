@@ -13,7 +13,7 @@ def cli():
     pass
 
 
-@click.command('scaffold', short_help='scaffold a folder with a pattern.')  
+@click.command('pattern', short_help='scaffold a folder with a pattern.')  
 @click.option('--interactive/--no-interactive', default=True)
 @click.argument('pattern')
 def scaffold(pattern, interactive):

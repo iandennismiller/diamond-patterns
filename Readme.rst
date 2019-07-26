@@ -22,25 +22,26 @@ Diamond-Patterns
 Installation
 ------------
 
-``pip`` is the recommended way to install Diamond-Patterns.
+Install Diamond-Patterns with Python pip.
 
 ::
 
     pip install diamond-patterns
 
 `Installation documentation <https://diamond-patterns.readthedocs.io/en/latest/install.html>`_ is available online.
-Diamond-Patterns requires Python 3.
 
 Usage
 -----
 
-*Scaffold* a LaTeX article using the ``article`` pattern:
+The ``pattern`` command will apply a pattern to the current directory.
+
+The following example applies the ``article`` pattern:
 
 ::
 
     mkdir article
     cd article
-    diamond scaffold article
+    diamond pattern article
 
 List all available patterns:
 
@@ -48,13 +49,18 @@ List all available patterns:
 
     diamond list
 
-
 View documentation for ``article`` pattern:
 
 ::
 
     diamond docs article
 
+Command line help:
+
+::
+
+    diamond --help
+    diamond pattern --help
 
 Online Resources
 ----------------

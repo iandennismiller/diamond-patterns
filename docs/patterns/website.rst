@@ -1,7 +1,16 @@
 Website
 =======
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/website>`_
+
 A website based on Jekyll.
+
+Pattern
+-------
+
+::
+
+    diamond pattern website
 
 Setup
 -----
@@ -14,7 +23,7 @@ Create a project for the website
 ::
 
     pip install diamond-patterns
-    diamond scaffold website
+    diamond pattern website
     git add -A
     git commit -am "initial commit"
 

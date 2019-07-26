@@ -1,6 +1,24 @@
 Changelog
 =========
 
+0.5.0
+-----
+
+2019-07-26
+
+- streamline command line interface
+- patterns are separate from python/bin distribution
+- mr.bob installs patterns direct from github
+- pattern manifest describes available patterns
+
+0.4.0
+-----
+
+2019-07-25
+
+- expand patterns
+- extend command line interface
+
 0.3.0
 -----
 

@@ -1,7 +1,16 @@
 Analysis
 ========
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/analysis>`_
+
 An R project suitable for data analysis.
+
+Pattern
+-------
+
+::
+
+    diamond pattern analysis
 
 These are the files in R/*
 

@@ -1,7 +1,16 @@
 Outline
 =======
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/outline>`_
+
 Structure for Scaffolding Towards a Publication.
+
+Pattern
+-------
+
+::
+
+    diamond pattern outline
 
 http://diamond-patterns.readthedocs.io/en/latest/patterns/outline.html
 

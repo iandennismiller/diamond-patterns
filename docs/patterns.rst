@@ -4,6 +4,15 @@ Patterns
 Diamond-Patterns contains many knowledge-work patterns.
 Part of the value added by collecting these patterns is in the documentation that can be aggregated in a single library location.
 
+Use any of the following patterns:
+
+::
+
+    diamond pattern [PATTERN]
+
+Patterns
+--------
+
 .. toctree::
     :maxdepth: 1
 

@@ -1,7 +1,16 @@
 Project
 =======
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/project>`_
+
 A basic team project with website, plan, and timeline.
+
+Pattern
+-------
+
+::
+
+    diamond pattern project
 
 overview
 --------

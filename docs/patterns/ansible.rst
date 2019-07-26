@@ -1,10 +1,19 @@
 Ansible
 =======
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/ansible>`_
+
 A linux system configuration container.
 
 This pattern provides for the management of a cloud of Linux machines.
 It is simple enough to manage a single machine, but ansible is capable of easily scaling up to support lots of similar machines.
+
+Pattern
+-------
+
+::
+
+    diamond pattern ansible
 
 bootstrapping
 -------------

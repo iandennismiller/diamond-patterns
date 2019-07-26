@@ -1,7 +1,16 @@
 Tufte
 =====
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/tufte>`_
+
 A Tufte Bookdown Online Article.
+
+Pattern
+-------
+
+::
+
+    diamond pattern tufte
 
 About
 -----

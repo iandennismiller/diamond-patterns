@@ -7,6 +7,7 @@ Usage
     :maxdepth: 2
 
     install
+    launch
     patterns
 
 About

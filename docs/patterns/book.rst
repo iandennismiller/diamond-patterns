@@ -1,6 +1,8 @@
 Book
 ====
 
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/book>`_
+
 A LaTeX book with multiple chapters.
 
 Setup
@@ -8,7 +10,7 @@ Setup
 
 ::
 
-    diamond scaffold book
+    diamond pattern book
 
 Book Making Guide
 -----------------
