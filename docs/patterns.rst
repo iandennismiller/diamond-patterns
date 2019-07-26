@@ -33,6 +33,7 @@ Available Patterns
     /patterns/beamer
     /patterns/book
     /patterns/chart
+    /patterns/letter
     /patterns/organization
     /patterns/outline
     /patterns/presentation

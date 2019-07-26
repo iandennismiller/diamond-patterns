@@ -31,4 +31,6 @@ Requirements
 
     sudo apt install \
         texlive-publishers \
-        texlive-bibtex-extra
+        texlive-bibtex-extra \
+        texlive-fonts-extra \
+        latexmk

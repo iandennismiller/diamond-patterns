@@ -16,15 +16,9 @@ NOSPELL= \
 all: $(PDF_FILES)
 	@echo done
 
-clean:
-	rm -rf .build
-	mkdir -p .build
-
 %.pdf: %.tex
 	@echo compiling $<...
-	pdflatex -output-directory=.build "$(basename $<).tex"
-	pdflatex -output-directory=.build "$(basename $<).tex"
-	cp ".build/$(basename $<).pdf" .
+	latexmk -xetex "$(basename $<).tex"
 
 %.spchk: %.tex
 	@aspell \
@@ -35,5 +29,31 @@ clean:
 		check $<
 
 spell: $(addsuffix .spchk,$(basename $(TEX_FILES)))
+
+clean:
+	rm -f \
+		*.aux \
+		*.bbl \
+		*.blg \
+		*.fdb_latexmk \
+		*.fls \
+		*.lof \
+		*.toc \
+		*.4ct \
+		*.4tc \
+		*.css \
+		*.dvi \
+		*.idv \
+		*.html \
+		*.lg \
+		*.log \
+		*.ncx \
+		*.tmp \
+		*.xref \
+		*.xwm \
+		*.lot \
+		*.out \
+		*.synctex.gz \
+		content.opf
 
 .PHONY: all clean spell
