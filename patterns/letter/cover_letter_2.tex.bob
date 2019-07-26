@@ -44,12 +44,12 @@
 %  PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-\setkomavar{fromname}{John Smith} % Your name
-\setkomavar{fromaddress}{123 Broadway\\City\\Country} % Your address
-\setkomavar{fromphone}{(000) 111-1111} % Your phone number
-\setkomavar{fromemail}{john@smith.com} % Your email address
+\setkomavar{fromname}{ {{{name}}} } % Your name
+\setkomavar{fromaddress}{ {{{address}}} } % Your address
+\setkomavar{fromphone}{ {{{phone}}} } % Your phone number
+\setkomavar{fromemail}{ {{{email}}} } % Your email address
 \setkomavar{place}{} % City written before the date, put your city here if you want this
-\setkomavar{signature}{John Smith} % Your name as you want it to appear in the signature
+\setkomavar{signature}{ {{{name}}} } % Your name as you want it to appear in the signature
 
 % These are not used in this document, uncomment if you would like to use them and refer to them as \usekomavar{name}
 %\setkomavar{fromfax}{+1 (1)23 456789} % Your fax number
@@ -63,7 +63,7 @@
 \firsthead{
 \centering
 {\addfontfeature{LetterSpace=20.0}\fontsize{36}{36}\selectfont\scshape \usekomavar{fromname}}\\[5mm]
-\fontsize{21}{21}\selectfont\scshape Programmer at Initech } % Your current job title
+\fontsize{21}{21}\selectfont\scshape {{{title}}} } % Your current job title
 
 %----------------------------------------------------------------------------------------
 %  FOOTER SECTION

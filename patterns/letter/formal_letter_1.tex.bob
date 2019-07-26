@@ -47,9 +47,9 @@
 %	YOUR NAME & ADDRESS SECTION
 %----------------------------------------------------------------------------------------
 
-\signature{John Smith} % Your name for the signature at the bottom
+\signature{ {{{name}}} } % Your name for the signature at the bottom
 
-\address{123 Broadway \\ City, State 12345 \\ (000) 111-1111} % Your address and phone number
+\address{ {{{address}}} \\ {{{phone}}} } % Your address and phone number
 
 %----------------------------------------------------------------------------------------
 
