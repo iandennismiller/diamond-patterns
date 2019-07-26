@@ -1,17 +1,27 @@
 Patterns
 ========
 
-Diamond-Patterns contains many knowledge-work patterns.
-Part of the value added by collecting these patterns is in the documentation that can be aggregated in a single library location.
+**Diamond-Patterns** contains many knowledge-work patterns.
+The full pattern consists of *code* and *documentation*.
+:doc:`/launch` quickly with reusable code and accessible documentation.
 
-Use any of the following patterns:
+Usage
+-----
+
+A pattern can be invoked on the command line:
 
 ::
 
     diamond pattern [PATTERN]
 
-Patterns
---------
+Documentation about a pattern is also available:
+
+::
+
+    diamond docs [PATTERN]
+
+Available Patterns
+------------------
 
 .. toctree::
     :maxdepth: 1

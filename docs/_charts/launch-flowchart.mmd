@@ -1,4 +1,5 @@
 graph TD;
-  go["Go"] --> check_stop["Stop at this time?"]
-  check_stop --no--> has_content["Ok?"];
-  check_stop --yes--> stop["Stop"];
+  start["Start"] --> req1["Req 1: project-system"];
+  req1 --> req2["Req 2: diamond-patterns"];
+  req2 --> pattern["diamond pattern PATTERN"];
+  pattern --> docs["diamond docs PATTERN"];

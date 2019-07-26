@@ -12,11 +12,22 @@ This is how to start a new project.
     diamond pattern letter
     diamond docs letter
 
+Read about the available patterns here: :doc:`/patterns`.
+
 Flowchart
 ---------
 
+.. image:: /_charts/launch-flowchart.png
+
 Requirements
 ------------
+
+diamond-patterns
+^^^^^^^^^^^^^^^^
+
+::
+
+    pip install diamond-patterns
 
 project-system
 ^^^^^^^^^^^^^^
@@ -27,13 +38,3 @@ project-system
 ::
 
     pip install project-system
-
-diamond-patterns
-^^^^^^^^^^^^^^^^
-
-:doc:`/patterns`
-
-::
-
-    pip install diamond-patterns
-

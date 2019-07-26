@@ -19,17 +19,6 @@ Diamond-Patterns
 .. .. image:: https://coveralls.io/repos/github/iandennismiller/diamond-patterns/badge.svg?branch=master
 ..     :target: https://coveralls.io/github/iandennismiller/diamond-patterns?branch=master
 
-Installation
-------------
-
-Install Diamond-Patterns with Python pip.
-
-::
-
-    pip install diamond-patterns
-
-`Installation documentation <https://diamond-patterns.readthedocs.io/en/latest/install.html>`_ is available online.
-
 Usage
 -----
 
@@ -49,6 +38,8 @@ List all available patterns:
 
     diamond list
 
+Read about `all the available patterns <https://diamond-patterns.readthedocs.io/en/latest/patterns.html>`_.
+
 View documentation for ``article`` pattern:
 
 ::
@@ -61,6 +52,17 @@ Command line help:
 
     diamond --help
     diamond pattern --help
+
+Installation
+------------
+
+Install Diamond-Patterns with Python pip.
+
+::
+
+    pip install diamond-patterns
+
+`Installation documentation <https://diamond-patterns.readthedocs.io/en/latest/install.html>`_ is available online.
 
 Online Resources
 ----------------

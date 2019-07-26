@@ -16,6 +16,11 @@ Setup
 Requirements
 ------------
 
+The Mermaid compiler ``mmdc`` is expected to be in ``~/node_modules/.bin/mmdc``.
+
+Install ``mermaid.cli`` on Debian with the following commands:
+
 ::
 
-    apt install 
+    sudo apt install npm
+    npm install mermaid.cli
