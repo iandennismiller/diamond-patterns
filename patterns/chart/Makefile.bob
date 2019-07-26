@@ -4,8 +4,6 @@ CHARTS = \
 MERMAID = ~/node_modules/.bin/mmdc
 
 all: $(CHARTS)
-	mkdir -p products
-	cp *.png products
 	@echo done
 
 %.png: %.mmd
