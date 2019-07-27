@@ -1,12 +1,7 @@
 Launch
 ======
 
-Get Working
------------
-
-.. image:: /_charts/launch-flowchart.png
-
-See available :doc:`/patterns` for more.
+See available :doc:`/patterns`.
 
 Commands
 --------
@@ -35,3 +30,8 @@ An an optional first step, create a new project with `Project-System <https://pr
     pip install project-system
     project-new3 my-project
     pip install diamond-patterns
+
+Get Working
+-----------
+
+.. image:: /_charts/launch-flowchart.png
