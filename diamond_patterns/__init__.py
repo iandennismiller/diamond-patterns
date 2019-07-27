@@ -8,6 +8,15 @@ import arrow
 import requests
 
 
+master_config = {
+    'manifest_file': '~/.diamond-patterns-manifest.json',
+    'docs_html_url': 'https://diamond-patterns.readthedocs.io/en/latest/patterns',
+    'docs_rst_url': 'https://raw.githubusercontent.com/iandennismiller/diamond-patterns/master/docs/patterns',
+    'manifest_url': 'https://raw.githubusercontent.com/iandennismiller/diamond-patterns/master/patterns/manifest.json',
+    'archive_url': 'https://github.com/iandennismiller/diamond-patterns/archive/master.zip#diamond-patterns-master/patterns',
+}
+
+
 class Pattern:
     def __init__(self):
         self.config_file = "~/.diamond-patterns.json"
@@ -25,25 +34,30 @@ class Pattern:
         self.patterns = self.manifest['patterns']
 
     def ensure_config(self):
-        master_config = {
-            'manifest_file': '~/.diamond-patterns-manifest.json',
-            'manifest_url': 'https://raw.githubusercontent.com/iandennismiller/diamond-patterns/master/patterns/manifest.json',
-            'archive_url': 'https://github.com/iandennismiller/diamond-patterns/archive/master.zip#diamond-patterns-master/patterns',
-        }
-
         if not os.path.isfile(self.config_file):
             print("WARNING: {} not found".format(self.config_file))
             with open(self.config_file, 'w') as f:
                 f.write(json.dumps(master_config, indent=2, sort_keys=True))
 
-    def open_docs(self, pattern):
+    def open_docs(self, pattern, web):
         if pattern not in self.patterns:
             print("unrecognized pattern: {0}".format(pattern))
             return
-        
-        url = "https://diamond-patterns.readthedocs.io/en/latest/patterns/{}.html".format(pattern)
-        print("Open: {}".format(url))
-        os.system("open '{}'".format(url))
+
+        html_url = "{}/{}.html".format(self.config["docs_html_url"], pattern)
+        rst_url = "{}/{}.rst".format(self.config["docs_rst_url"], pattern)
+
+        print("URL: {}\n".format(html_url))
+
+        if web:
+            try:
+                os.system("open '{}'".format(html_url))
+            except:
+                print("WARNING: could not open browser with 'open'")
+        else:
+            r = requests.get(rst_url)
+            if r.status_code == 200:
+                print(r.text)
 
     def run_scaffold(self, pattern, interactive=True):
         if pattern not in self.patterns:

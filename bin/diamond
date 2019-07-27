@@ -13,22 +13,23 @@ def cli():
     pass
 
 
-@click.command('pattern', short_help='scaffold a folder with a pattern.')  
-@click.option('--interactive/--no-interactive', default=True)
+@click.command('pattern', short_help='Scaffold a folder with a pattern.')
+@click.option('--interactive/--no-interactive', default=True, help='Interactive configuration.')
 @click.argument('pattern')
 def scaffold(pattern, interactive):
     p = Pattern()
     p.run_scaffold(pattern, interactive)
 
 
-@click.command('docs', short_help='documentation for a pattern.')  
+@click.command('docs', short_help='Documentation for a pattern.')
+@click.option('--web/--no-web', default=False, help='Open docs in browser.')
 @click.argument('pattern')
-def docs(pattern):
+def docs(pattern, web):
     p = Pattern()
-    p.open_docs(pattern)
+    p.open_docs(pattern, web)
 
 
-@click.command('list', short_help='list available patterns.')
+@click.command('list', short_help='List available patterns.')
 def list_patterns():
     p = Pattern()
     print("Available patterns:\n")
@@ -37,12 +38,12 @@ def list_patterns():
     print("")
 
 
-@click.command('version', short_help='show version')
+@click.command('version', short_help='Show version')
 def version():
     print()
 
 
-@click.command('update', short_help='update patterns')
+@click.command('update', short_help='Update patterns')
 def update():
     p = Pattern()
     print("Updating {}".format(p.config["manifest_file"]))
