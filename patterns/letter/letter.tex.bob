@@ -9,7 +9,7 @@
 % Author:
 % Vel (vel@LaTeXTemplates.com)
 %
-% Originally based on an example on WikiBooks 
+% Originally based on an example on WikiBooks
 % (http://en.wikibooks.org/wiki/LaTeX/Letters) but rewritten as of v2.0
 %
 % License:
@@ -21,14 +21,14 @@
 %	DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[10pt]{letter} % 10pt font size default, 11pt and 12pt are also possible
+\documentclass[10pt]{letter} % 10pt, 11pt and 12pt font sizes are possible
 
 \usepackage{geometry} % Required for adjusting page dimensions
 
 %\longindentation=0pt % Un-commenting this line will push the closing "Sincerely," to the left of the page
 
 \geometry{
-	paper=a4paper, % Change to letterpaper for US letter
+	paper=letterpaper, % letterpaper for US letter, a4paper for A4
 	top=3cm, % Top margin
 	bottom=1.5cm, % Bottom margin
 	left=4.5cm, % Left margin
@@ -38,9 +38,7 @@
 
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[utf8]{inputenc} % Required for inputting international characters
-
 \usepackage{stix} % Use the Stix font by default
-
 \usepackage{microtype} % Improve justification
 
 %----------------------------------------------------------------------------------------
@@ -49,7 +47,7 @@
 
 \signature{ {{{name}}} } % Your name for the signature at the bottom
 
-\address{ {{{address}}} \\ {{{phone}}} } % Your address and phone number
+\address{ {{{address}}} \\ {{{phone}}} \\ {{{email}}} } % Your address and phone number
 
 %----------------------------------------------------------------------------------------
 
@@ -59,7 +57,7 @@
 %	ADDRESSEE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{letter}{Nathan Drake \\ LaTeXTemplates.com \\ 321 Pleasant Lane \\ City, State 12345} % Name/title of the addressee
+\begin{letter}{ {{{to_address}}} } % Name/title of the addressee
 
 %----------------------------------------------------------------------------------------
 %	LETTER CONTENT SECTION
@@ -86,5 +84,5 @@ I look forward to your reply.
 %----------------------------------------------------------------------------------------
 
 \end{letter}
- 
+
 \end{document}

@@ -16,8 +16,8 @@
 %
 % The two fonts used in this template: Adobe Garamond Pro and Gill Sans
 % do not come with Windows by default. You will need to download them in
-% order to get an output as in the preview PDF. Otherwise, change those 
-% fonts to fonts that do come with Windows or comment out the lines to use 
+% order to get an output as in the preview PDF. Otherwise, change those
+% fonts to fonts that do come with Windows or comment out the lines to use
 % the default font.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,14 +88,12 @@
 %----------------------------------------------------------------------------------------
 
 \begin{letter}{ % Address of the company you are applying to
-HR Dept. --- Corporation\\
-123 Pleasant Lane\\
-12345 City, State
+{{{to_address}}}
 }
 
 \setkomavar{subject}{Cover Letter} % This is the bold text saying 'Cover Letter', remove it if you don't like it
 
-\opening{Dear Recruiter,}
+\opening{Dear Audience,}
 
 PARAGRAPH ONE: State the reason for the letter, name the position or type of work you are applying for and identify the source from which you learned of the opening.\\
 

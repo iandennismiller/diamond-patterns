@@ -1,16 +1,16 @@
-Letter
-======
+Cover-Letter
+============
 
-`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/letter>`_
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/cover-letter>`_
 
-A LaTeX formal letter. Basic but complete. Address from/to, phone, email.
+A LaTeX cover letter, like for a job application, pitch, or proposal.
 
 Setup
 -----
 
 ::
 
-    diamond pattern letter
+    diamond pattern cover-letter
 
 Build the article with LaTeX and open the resulting PDF:
 

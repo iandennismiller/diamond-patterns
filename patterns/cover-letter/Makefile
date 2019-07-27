@@ -1,7 +1,7 @@
-# Formal-Letter Makefile
+# Letter Makefile
 
 TEX_FILES = \
-	letter.tex
+	cover-letter.tex
 
 PDF_FILES = $(TEX_FILES:.tex=.pdf)
 
