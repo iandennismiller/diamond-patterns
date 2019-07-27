@@ -3,7 +3,7 @@ image: aergus/latex
 stages:
   - build
 
-Build Presentation:
+Build:
   stage: build
   script:
     - make
