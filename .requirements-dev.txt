@@ -11,3 +11,4 @@ nose
 arrow
 pylint
 requests
+twine
