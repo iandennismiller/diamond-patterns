@@ -1,7 +1,7 @@
 Diamond-Patterns
 ================
 
-**Diamond-Patterns** are scaffolds for knowledge work.  Use patterns to go faster.
+**Diamond-Patterns** are patterns for knowledge work.  Use patterns to go faster.
 
 .. image:: https://img.shields.io/github/stars/iandennismiller/diamond-patterns.svg?style=social&label=GitHub
     :target: https://github.com/iandennismiller/diamond-patterns
@@ -19,18 +19,30 @@ Diamond-Patterns
 .. .. image:: https://coveralls.io/repos/github/iandennismiller/diamond-patterns/badge.svg?branch=master
 ..     :target: https://coveralls.io/github/iandennismiller/diamond-patterns?branch=master
 
+**Diamond-Patterns** is a collection of patterns, along with software for applying those patterns to a directory.
+Patterns consist of code templates and documentation that describes how to use each one.
+There are patterns for several kinds of knowledge work: documents, projects, presentations, software, websites, and more.
+See `the list of available patterns <https://diamond-patterns.readthedocs.io/en/latest/patterns.html>`_.
+
 Usage
 -----
 
-The ``pattern`` command will apply a pattern to the current directory.
+The ``diamond`` command is used to control **Diamond-Patterns**.
 
-The following example applies the ``article`` pattern:
+pattern
+^^^^^^^
+
+Create a folder called ``my-letter``.
+Apply the ``letter`` pattern to it:
 
 ::
 
-    mkdir article
-    cd article
-    diamond pattern article
+    mkdir my-letter
+    cd my-letter
+    diamond pattern letter
+
+list
+^^^^
 
 List all available patterns:
 
@@ -38,13 +50,18 @@ List all available patterns:
 
     diamond list
 
-Read about `all the available patterns <https://diamond-patterns.readthedocs.io/en/latest/patterns.html>`_.
+docs
+^^^^
 
-View documentation for ``article`` pattern:
+View documentation for ``letter`` pattern:
 
 ::
 
-    diamond docs article
+    diamond docs letter
+    diamond docs --web letter
+
+help
+^^^^
 
 Command line help:
 

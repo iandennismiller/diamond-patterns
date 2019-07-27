@@ -1,6 +1,27 @@
 Changelog
 =========
 
+0.5.3
+-----
+
+2019-07-27
+
+- docs render in terminal
+
+0.5.2
+-----
+
+2019-07-26
+
+- bug fix
+
+0.5.1
+-----
+
+2019-07-26
+
+- ``diamond pattern [PATTERN]``
+
 0.5.0
 -----
 
