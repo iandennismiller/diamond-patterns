@@ -29,16 +29,16 @@ Usage
 
 The ``diamond`` command is used to control **Diamond-Patterns**.
 
+To keep each project separate, create a sub-directory for each pattern.
+`Project-System <https://project-system.readthedocs.io/en/latest/>`_ can help manage these sub-directories.
+
 pattern
 ^^^^^^^
 
-Create a folder called ``my-letter``.
-Apply the ``letter`` pattern to it:
+Apply the ``letter`` pattern to the current directory:
 
 ::
 
-    mkdir my-letter
-    cd my-letter
     diamond pattern letter
 
 list
