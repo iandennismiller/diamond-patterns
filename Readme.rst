@@ -29,9 +29,6 @@ Usage
 
 The ``diamond`` command is used to control **Diamond-Patterns**.
 
-To keep each project separate, create a sub-directory for each pattern.
-`Project-System <https://project-system.readthedocs.io/en/latest/>`_ can help manage these sub-directories.
-
 pattern
 ^^^^^^^
 
