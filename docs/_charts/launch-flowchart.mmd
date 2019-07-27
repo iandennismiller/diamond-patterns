@@ -1,5 +1,22 @@
-graph TD;
-  start["Start"] --> req["pip install diamond-patterns"];
-  req --> pattern["diamond pattern PATTERN"];
+graph LR;
+  select["Select pattern"] --> pattern["diamond pattern PATTERN"];
   pattern --> docs["diamond docs PATTERN"];
   docs --> working["Get Working!"];
+
+subgraph patterns
+  agile --> select;
+  analysis --> select;
+  ansible --> select;
+  article --> select;
+  beamer --> select;
+  book --> select;
+  chart --> select;
+  organization --> select;
+  outline --> select;
+  presentation --> select;
+  project --> select;
+  python --> select;
+  tufte --> select;
+  website --> select;
+  letter --> select;
+end
