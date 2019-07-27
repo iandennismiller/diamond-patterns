@@ -1,0 +1,12 @@
+image: aergus/latex
+
+stages:
+  - build
+
+Build Presentation:
+  stage: build
+  script:
+    - make
+  artifacts:
+    paths:
+      - letter.pdf
