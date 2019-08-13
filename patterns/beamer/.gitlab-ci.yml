@@ -1,0 +1,47 @@
+image: aergus/latex
+
+stages:
+  - build
+  - production
+
+Build Presentation:
+  stage: build
+  script:
+    - cd presentation && make all
+  artifacts:
+    paths:
+      - presentation/build/
+
+Deploy to Production:
+  stage: production
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - scp -v -r presentation/build/* "$SSH_SCP_DESTINATION"
+
+# 0.0 Configure GitLab CI with value for SSH_SCP_DESTINATION
+# 0.1 Navigate to GitLab:Settings:CI/CD:Variables
+# 0.2 Create variable called SSH_SCP_DESTINATION
+# 0.3 Populate SSH_SCP_DESTINATION with user@hostname
+
+# 1.0 Configure GitLab CI with value for SSH_KNOWN_HOSTS
+# 1.1 Navigate to GitLab:Settings:CI/CD:Variables
+# 1.2 Create variable called SSH_KNOWN_HOSTS
+# 1.3 Evaluate `ssh-keyscan $SSH_SCP_DESTINATION` to produce $SSH_KNOWN_HOSTS
+
+# 2.0 Configure GitLab CI with value for SSH_PRIVATE_KEY
+# 2.1 Navigate to GitLab:Settings:CI/CD:Variables
+# 2.2 Create variable called SSH_PRIVATE_KEY
+# 2.3 Evaluate `ssh-keygen -t rsa -b 4096 -C deploy-key -f /tmp/deploy-key`
+# 2.4 Populate SSH_PRIVATE_KEY from /tmp/deploy-key
+
+# 3.0 Set up SSH on deployment host
+# 3.1 `cat /tmp/deploy-key >> ~/.ssh/authorized_keys`
+# 3.2 `vi ~/.ssh/authorized_keys` and add the following before the new key
+# no-port-forwarding,no-pty,command="scp -v -r -d -t /var/www/PATH"
