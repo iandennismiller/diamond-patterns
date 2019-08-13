@@ -38,10 +38,9 @@ slide_level: 2
 
 :::
 ::: {.column}
-![](images/stock/strategy.jpg){width="80%"}
 
-`\scriptsize{Source: https://commons.wikimedia.org/wiki/
-  File:whatever...}`{=latex}
+![https://commons.wikimedia.org/wiki/ File:whatever](images/stock/strategy.jpg){width="80%"}
+
 :::
 ::::
 
