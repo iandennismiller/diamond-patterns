@@ -1,0 +1,80 @@
+/*
+Ian Dennis Miller
+
+This style is inspired by Maciej Ceglowski's talks.
+*/
+
+img {
+    /* margin-left: -21em; */
+    /* margin-right: 1em; */
+    border: 1px solid darkgray !important;
+}
+
+figure {
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+figcaption {
+    display: none;
+}
+
+h2, h3, h4 {
+    visibility: hidden;
+}
+
+h1, h2, h3, h4 {
+    clear: both;
+}
+
+h1 {
+    margin: 2.5em 0 !important;
+}
+
+h1.title {
+    margin: 1em 0 !important;
+}
+
+h2.toc {
+    visibility: visible !important;
+}
+
+h1, span.title {
+    visibility: visible !important;
+    text-align: center;
+    border-bottom: none !important;
+}
+
+span.title {
+    display: block;
+    margin-bottom: 4em;
+}
+
+p, ul, ol {
+    margin-left: 21em;
+    text-align: justify;
+}
+
+@media only screen and (min-width: 769px) {
+    img {
+        width: 320px;
+        transition: transform .2s;
+    }
+
+    img:hover {
+        transform: scale(3) translate(6em, 0em);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    img {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-left: 0em;
+    }
+
+    p {
+        margin-left: 0em;
+    }
+}
