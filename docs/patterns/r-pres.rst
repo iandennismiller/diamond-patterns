@@ -1,5 +1,5 @@
-Presentation
-============
+R Presentation
+==============
 
 `Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/r-pres>`_
 
