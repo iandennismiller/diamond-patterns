@@ -7,15 +7,15 @@
     "beamer",
     "book",
     "chart",
+    "cover-letter",
+    "letter",
     "organization",
     "outline",
-    "presentation",
     "project",
     "python",
+    "r-pres",
     "tufte",
-    "website",
-    "letter",
-    "cover-letter"
+    "website"
   ],
   "timestamp": 1564070384
 }

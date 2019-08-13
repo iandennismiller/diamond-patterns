@@ -10,5 +10,5 @@ Pattern
 
 ::
 
-    diamond pattern agile
+    diamond pattern beamer
     make

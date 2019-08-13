@@ -1,9 +1,9 @@
 Presentation
 ============
 
-`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/presentation>`_
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/r-pres>`_
 
-An HTML5 presentation.
+An HTML5 presentation described with R Markdown and built with R.
 
 Pattern
 -------

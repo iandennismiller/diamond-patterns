@@ -37,8 +37,8 @@ Available Patterns
     /patterns/letter
     /patterns/organization
     /patterns/outline
-    /patterns/presentation
     /patterns/project
     /patterns/python
+    /patterns/r-pres
     /patterns/tufte
     /patterns/website
