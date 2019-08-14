@@ -1,20 +1,20 @@
 {
   "patterns": [
-    "agile",
     "analysis",
     "ansible",
     "article",
-    "beamer",
+    "article-tufte",
     "book",
     "chart",
-    "cover-letter",
-    "letter",
+    "letter-flashy",
+    "letter-formal",
     "organization",
     "outline",
+    "presentation",
+    "presentation-rmd",
     "project",
+    "project-agile",
     "python",
-    "r-pres",
-    "tufte",
     "website"
   ],
   "timestamp": 1564070384

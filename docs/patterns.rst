@@ -26,19 +26,19 @@ Available Patterns
 .. toctree::
     :maxdepth: 1
 
-    /patterns/agile
     /patterns/analysis
     /patterns/ansible
     /patterns/article
-    /patterns/beamer
+    /patterns/article-tufte
     /patterns/book
     /patterns/chart
-    /patterns/cover-letter
-    /patterns/letter
+    /patterns/letter-flashy
+    /patterns/letter-formal
     /patterns/organization
     /patterns/outline
+    /patterns/presentation
+    /patterns/presentation-rmd
     /patterns/project
+    /patterns/project-agile
     /patterns/python
-    /patterns/r-pres
-    /patterns/tufte
     /patterns/website
