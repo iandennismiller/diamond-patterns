@@ -1,5 +1,5 @@
 ---
-- hosts: '{{ target }}'
+- hosts: '{{{ hostname }}}'
   become: yes
   roles:
     - ansible

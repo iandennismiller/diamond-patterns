@@ -20,7 +20,7 @@ depends:
 ping:
 	ansible all -m ping
 
-bootstrap:
-	bin/bootstrap.sh {{{ hostname }}}
+bootstrap: depends
+	ansible-playbook .bootstrap/bootstrap.yaml -k --ask-become-pass
 
 .PHONY: dry-run deploy clean depends ping bootstrap
