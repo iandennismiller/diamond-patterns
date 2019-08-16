@@ -1,0 +1,53 @@
+---
+mode: man
+floatsintext: true
+classoption: # apa6 documentclass options (latex/pdf output)
+    - noextraspace
+author:
+    - {{{author.name}}}
+institute:
+    - {{{institution}}}
+date: "Last updated: \\today"
+keywords:
+    - keyword
+    - another
+
+title: {{{title}}}
+subtitle: {{{subtitle}}}
+authornote: |
+    \noindent Correspondence:
+
+    {{{author.name}}}
+
+    {{{department}}}
+
+abstract: |
+    Here is an abstract.
+---
+
+![Thumbnail](thumbs/01.jpg)
+
+In this presentation, I discuss ...
+
+# Introduction
+
+![Thumbnail](thumbs/02.jpg)
+
+I start with my objectives and then describe the structure of this talk.
+
+## Objective
+
+![Thumbnail](thumbs/03.jpg)
+
+Blah.
+
+# Conclusion
+
+![Thumbnail](thumbs/04.jpg)
+
+## Thank you
+
+![Thumbnail](thumbs/05.jpg)
+
+This concludes my presentation.
+Thank you.

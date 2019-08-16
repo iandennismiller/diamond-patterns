@@ -1,8 +1,8 @@
 ---
 aspectratio: "169"
-author: "Firstname Lastname"
-title: "Sweet Title"
-date: "2018-10-23"
+author: "{{{author.name}}}"
+title: "{{{title}}}"
+date: "2019-08-16"
 slide_level: 2
 ---
 
@@ -43,6 +43,12 @@ slide_level: 2
 
 :::
 ::::
+
+---
+
+## Full Page Image
+
+![https://commons.wikimedia.org/wiki/ File:whatever](images/stock/strategy.jpg){width="80%"}
 
 # Background
 

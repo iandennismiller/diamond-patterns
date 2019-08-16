@@ -1,7 +1,10 @@
-# Diamond-Patterns
+# Diamond-Patterns Presentation
 # Ian Dennis Miller
 
-slides:
+all: presentation.pdf thumbs transcript.docx transcript.html manuscript.pdf
+	@echo "All done"
+
+presentation.pdf: presentation.md
 	pandoc \
 		-f markdown \
 		-t beamer \
@@ -11,7 +14,7 @@ slides:
 		-o presentation.pdf \
 		presentation.md
 
-doc:
+transcript.docx: transcript.md
 	cat transcript.md | \
 	grep -v '!\[Thumbnail\](thumbs' | \
 	pandoc \
@@ -21,7 +24,7 @@ doc:
 		--toc-depth=2 \
 		-o transcript.docx
 
-html:
+transcript.html: transcript.md
 	pandoc \
 		-f markdown \
 		-t html5 \
@@ -33,12 +36,24 @@ html:
 		-o transcript.html \
 		transcript.md
 
+# adapted from https://github.com/iamamutt/pandoc-apa
+manuscript.pdf: transcript.md
+	cat transcript.md | \
+	grep -v '!\[Thumbnail\](thumbs' | \
+	pandoc \
+        --from=markdown \
+        --to=latex \
+        --csl=pandoc/apa.csl \
+        --template=pandoc/apa_template.tex \
+        --standalone \
+        --output=manuscript.pdf
+
 # split PDF into individual PNG images
 # 	geometry: produce images at specified resolution
 # 	density: render source PDF at 90 dpi
 # 	scene: slide numbering starts at 01
 #   strip: reduce file size
-thumbs:
+thumbs: presentation.pdf
 	rm -rf ./thumbs
 	mkdir ./thumbs
 	convert \
@@ -50,23 +65,9 @@ thumbs:
 		presentation.pdf \
 		thumbs/%02d.jpg
 
-# adapted from https://github.com/iamamutt/pandoc-apa
-manuscript:
-	cat transcript.md | \
-	grep -v '!\[Thumbnail\](thumbs' | \
-	pandoc \
-        --from=markdown \
-        --to=latex \
-        --csl=pandoc/apa.csl \
-        --template=pandoc/apa_template.tex \
-        --standalone \
-        --output=manuscript.pdf
-
-all: doc slides thumbs manuscript html
-	@echo "All done"
-
 products: all
-	cp ./build/* ../products
+	mkdir -p products
+	cp presentation.pdf transcript.docx transcript.html manuscript.pdf products
 	@echo "Products done"
 
-.PHONY: all slides doc thumbs html products manuscript
+.PHONY: all thumbs products
