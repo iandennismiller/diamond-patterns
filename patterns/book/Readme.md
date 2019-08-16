@@ -1,6 +1,6 @@
 # Book
 
-http://diamond-patterns.readthedocs.io/en/latest/patterns/book.html
+https://diamond-patterns.readthedocs.io/en/latest/patterns.html
 
 ## Rights Tracking
 

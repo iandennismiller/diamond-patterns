@@ -1,3 +1,3 @@
 # Analysis
 
-http://diamond-patterns.readthedocs.io/en/latest/patterns/analysis.html
+https://diamond-patterns.readthedocs.io/en/latest/patterns.html

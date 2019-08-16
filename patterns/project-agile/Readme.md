@@ -2,4 +2,4 @@
 title: "Diamond Agile Project Management"
 ---
 
-http://diamond-patterns.readthedocs.io/en/latest/patterns/agile.html
+https://diamond-patterns.readthedocs.io/en/latest/patterns.html

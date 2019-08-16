@@ -1,6 +1,6 @@
 # Presentation
 
-http://diamond-patterns.readthedocs.io/en/latest/patterns/presentation.html
+https://diamond-patterns.readthedocs.io/en/latest/patterns.html
 
 - Build this presentation with `make`.
 - This presentation builds into `/docs`.

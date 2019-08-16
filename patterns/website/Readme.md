@@ -1,6 +1,6 @@
 # website
 
-http://diamond-patterns.readthedocs.io/en/latest/patterns/website.html
+https://diamond-patterns.readthedocs.io/en/latest/patterns.html
 
 To run the local server:
 

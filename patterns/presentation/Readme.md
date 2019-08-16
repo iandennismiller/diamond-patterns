@@ -1,3 +1,3 @@
 # Beamer Presentation
 
-http://diamond-patterns.readthedocs.io/en/latest/patterns/beamer.html
+https://diamond-patterns.readthedocs.io/en/latest/patterns.html

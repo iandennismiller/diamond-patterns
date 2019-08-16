@@ -2,7 +2,8 @@
 title: Online Article
 ---
 
-- http://diamond-patterns.readthedocs.io/en/latest/patterns/tufte.html
+https://diamond-patterns.readthedocs.io/en/latest/patterns.html
+
 - Create online articles with Tufte aesthetic using R Markdown and Bookdown.
 - `make depends` will install the necessary R libraries.
 - `make html` produces an HTML website.

@@ -1,3 +1,3 @@
-# Organization
+# Letter
 
 https://diamond-patterns.readthedocs.io/en/latest/patterns.html
