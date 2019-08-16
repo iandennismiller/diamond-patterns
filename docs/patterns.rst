@@ -35,10 +35,10 @@ Available Patterns
     /patterns/letter-flashy
     /patterns/letter-formal
     /patterns/organization
-    /patterns/outline
     /patterns/presentation
     /patterns/presentation-rmd
     /patterns/project
     /patterns/project-agile
     /patterns/python
+    /patterns/research
     /patterns/website
