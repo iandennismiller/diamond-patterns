@@ -1,0 +1,29 @@
+{{{name}}}
+======
+
+`Source Code <https://github.com/iandennismiller/diamond-patterns/tree/master/patterns/{{{name}}}>`_
+
+This is the {{{name}}} pattern.
+
+Setup
+-----
+
+::
+
+    diamond pattern {{{name}}}
+
+Then make it:
+
+::
+
+    make
+
+Configuration
+-------------
+
+None.
+
+Requirements
+------------
+
+None.

@@ -35,6 +35,7 @@ Available Patterns
     /patterns/letter-flashy
     /patterns/letter-formal
     /patterns/organization
+    /patterns/pattern
     /patterns/presentation
     /patterns/presentation-rmd
     /patterns/project
