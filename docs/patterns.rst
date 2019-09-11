@@ -42,4 +42,5 @@ Available Patterns
     /patterns/project-agile
     /patterns/python
     /patterns/research
+    /patterns/statement
     /patterns/website
