@@ -14,6 +14,7 @@ Apply this pattern in the root of the diamond-patterns project.
 
     cd ~/Work/diamond-patterns
     diamond pattern pattern
+    rm .mrbob.ini
 
 Configuration
 -------------
