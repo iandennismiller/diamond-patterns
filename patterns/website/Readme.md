@@ -2,6 +2,10 @@
 
 https://diamond-patterns.readthedocs.io/en/latest/patterns.html
 
+To install requirements, including Ruby bundles:
+
+    make requirements
+
 To run the local server:
 
     make serve
@@ -26,9 +30,10 @@ Create an Ansible role for the web host to contain this website.
 
 Create a project for the website
 
-    project-new3 www-project
+    project-new www-project
     pip install diamond-patterns
-    diamond --skel website scaffold
+    diamond pattern website
+    make requirements
     git add -A
     git commit -am "initial commit"
 

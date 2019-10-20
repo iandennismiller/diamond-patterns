@@ -3,23 +3,24 @@
 all:
 	@echo OK
 
-artwork:
-	_bin/artwork.sh
+requirements:
+	chmod 755 _bin/*
+	_bin/requirements.sh
 
 new:
 	_bin/template.py
 
+serve:
+	bundle exec jekyll serve
+
 publish:
 	_bin/publish.sh
 
-depends:
-	_bin/depends.sh
+artwork:
+	_bin/artwork.sh
 
 install:
 	rsync -acv --delete _site/ ~/www/
-
-serve:
-	bundle exec jekyll serve
 
 incremental:
 	bundle exec jekyll clean
