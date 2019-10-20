@@ -1,0 +1,63 @@
+image: iandennismiller/pub2
+
+stages:
+  - build
+  - production
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - vendor
+
+###
+# Build
+
+Build Website:
+  stage: build
+  before_script:
+    - source /usr/local/rvm/scripts/rvm && bundle install --path vendor
+  script:
+    - source /usr/local/rvm/scripts/rvm && make build
+  artifacts:
+    paths:
+      - _site/
+
+###
+# Deploy
+
+Deploy to Production:
+  stage: production
+  cache:
+    policy: pull
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - scp -v -r _site/* "$SSH_SCP_DESTINATION"
+
+###
+# How to Deploy
+#
+# DEPLOY_KEY_NAME: my-site
+# DEPLOY_PATH: /var/www/$DEPLOY_KEY_NAME
+#
+# Set these GitLab variables: SSH_SCP_DESTINATION, SSH_KNOWN_HOSTS, and SSH_PRIVATE_KEY.
+#
+# Navigate to GitLab:Settings:CI/CD:Variables
+#
+# SSH_SCP_DESTINATION: $USER@$HOST:$DEPLOY_PATH
+# SSH_KNOWN_HOSTS: ssh-keyscan $SSH_SCP_DESTINATION
+# SSH_PRIVATE_KEY: ssh-keygen -t rsa -b 4096 -C $DEPLOY_KEY_NAME -f ./$DEPLOY_KEY_NAME
+#
+# Append public deploy key:
+#
+# cat $DEPLOY_KEY_NAME.pub >> ~/.ssh/authorized_keys
+#
+# Set authorization for key:
+#
+# echo 'no-port-forwarding,no-pty,command="scp -v -r -d -t $DEPLOY_PATH"' >> ~/.ssh/authorized_keys
