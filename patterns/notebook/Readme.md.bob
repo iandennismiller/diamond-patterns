@@ -1,0 +1,8 @@
+# {{{ name }}}
+
+## Usage
+
+```
+make requirements
+make notebook
+```
