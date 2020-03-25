@@ -3,7 +3,9 @@
 all:
 	@echo OK
 
-# sudo gem install bundler
+# curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
+# source ~/.rvm/scripts/rvm
+# gem install bundler
 requirements:
 	chmod 755 _bin/*
 	_bin/requirements.sh
