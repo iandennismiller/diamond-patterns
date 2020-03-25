@@ -3,6 +3,7 @@
 all:
 	@echo OK
 
+# sudo gem install bundler
 requirements:
 	chmod 755 _bin/*
 	_bin/requirements.sh
