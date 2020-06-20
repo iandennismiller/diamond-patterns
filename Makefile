@@ -26,6 +26,9 @@ test:
 manifest:
 	bin/manifest.py
 
+pattern:
+	diamond pattern pattern
+
 release:
 	python setup.py sdist bdist_wheel
 	twine upload dist/*

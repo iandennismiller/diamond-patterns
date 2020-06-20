@@ -1,0 +1,6 @@
+# click
+jsfsdb==0.1.0
+flask
+flask_login
+flask_wtf
+wtforms

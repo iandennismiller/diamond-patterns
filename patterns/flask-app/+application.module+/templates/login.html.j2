@@ -1,0 +1,21 @@
+{% extends "shared/base.html.j2" %}
+
+{% from "shared/_formhelpers.html.j2" import render_field_nolabel %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4"><i class="fas fa-key"></i> Login</h1>
+
+    <p class="lead">
+        Please enter your <b>Username</b> and <b>Password</b> then press <b>Login</b>.
+    </p>
+
+    <form method="POST" action="{{ url_for('.login', next=next_page) }}">
+        {{ form.hidden_tag() }}
+        {{ render_field_nolabel(form.username, autofocus=true) }}
+        {{ render_field_nolabel(form.password, autofocus=true) }}
+        {{ form.submit_button(class_="btn btn-primary btn-lg") }}
+    </form>
+</div>
+
+{% endblock %}

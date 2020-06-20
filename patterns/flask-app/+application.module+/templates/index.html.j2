@@ -1,0 +1,78 @@
+{% extends "shared/base.html.j2" %}
+
+{% block content %}
+
+{% if not current_user.is_authenticated %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Application Server</h1>
+
+    <p class="lead">
+        Welcome to Application.
+    </p>
+
+    <a href="/login" type="button" class="btn btn-primary btn-lg">Login <i class="fas fa-chevron-right"></i></a>
+</div>
+
+{% endif %}
+
+{% if current_user.is_authenticated %}
+
+<div class="jumbotron">
+    <h1 class="display-4"><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+
+    <p class="lead">
+        Manage your account on this page.
+    </p>
+
+    <p>
+        <a href="/next" type="button" class="btn btn-primary btn-lg">Do Something <i class="fas fa-chevron-right"></i></a>
+    </p>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <h1 class="display-5"><i class="fas fa-tasks"></i> One Panel</h1>
+
+            <hr class="my-4">
+
+            {% for session in current_user.data['tasks'] %}
+                <h3>Session</h3>
+                {% for task in session %}
+                    <p>{{ task }}</p>
+                {% endfor %}
+            {% endfor %}
+
+        </div>
+
+        <div class="col-md-6">
+
+            <h1 class="display-5"><i class="far fa-calendar-check"></i> Another Panel</h1>
+
+            <hr class="my-4">
+
+            <h3 class="display-6">Appointments</h3>
+
+            {% if current_user.data.schedule|length >= 1 %}
+            {% for session in current_user.data['schedule'] %}
+                {{ session }}
+            {% endfor %}
+            {% else %}
+            This is your only session
+            {% endif %}
+
+            <hr class="my-4">
+
+            <h1 class="display-5"><i class="fas fa-sd-card"></i> State</h1>
+
+        </div>
+
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{{{ application.name }}}
+=============
+
+https://{{{ application.name }}}.readthedocs.io
+
+{{{ description.short }}}
+
+.. image:: https://img.shields.io/github/stars/{{{ author.github }}}/{{{ application.name }}}.svg?style=social&label=GitHub
+    :target: {{{ project.repo_url }}}
+
+.. image:: https://img.shields.io/pypi/v/{{{ application.name }}}.svg
+    :target: https://pypi.python.org/pypi/{{{ application.name }}}
+
+.. image:: https://readthedocs.org/projects/{{{ application.name }}}/badge/?version=latest
+    :target: http://{{{ application.name }}}.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+.. image:: https://travis-ci.org/{{{ author.github }}}/{{{ application.name }}}.svg?branch=master
+    :target: https://travis-ci.org/{{{ author.github }}}/{{{ application.name }}}
+
+Overview
+--------
+
+Provide a longer description of the project.
+
+Installation
+^^^^^^^^^^^^
+
+Python pip
+~~~~~~~~~~
+
+::
+
+    pip install {{{ application.name }}}
+
+Usage
+^^^^^
+
+::
+
+    blah
+
+Documentation
+^^^^^^^^^^^^^
+
+{{{ project.url }}}
