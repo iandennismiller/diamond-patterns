@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix thesis: <https://projects.sisrlab.com/idm/visfact/raw/master/schema/thesis.rdf#> .
+
+<#article-1>
+    a thesis:Article ;
+    dc:title "" ;
+    dc:authors "" ;
+    dc:url "https://doi.org/" ;
+    dc:year 2019 .
+
+# [ a thesis:Claim ;
+#     thesis:appearance <#article-1> ;
+#     thesis:quote "" ;
+#     thesis:note "" ;
+#     thesis:source <#article-1> ;
+# ] .
+
+# [ a thesis:Claim ;
+#     thesis:appearance <#article-1> ;
+#     thesis:quote "" ;
+#     thesis:source [ a thesis:Article ;
+#         dc:authors "" ;
+#         dc:title "" ;
+#         dc:year  ;
+#     ] ;
+# ] .

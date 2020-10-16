@@ -1,0 +1,6 @@
+---
+title: "example argument - visfact"
+files:
+  - "src/article.ttl"
+dest: "build/argument-1.html"
+rdf: "build/argument-1.rdf"
